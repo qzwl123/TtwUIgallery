@@ -1,0 +1,38 @@
+{
+	"backtrace" : 0,
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : 
+		[
+			"libs/Ttw/Core/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 0,
+			"id" : "TtwCore_qtprotobufgen_deps_0::@f69cb33fa87432acf13d"
+		}
+	],
+	"folder" : 
+	{
+		"name" : "QtInternalTargets"
+	},
+	"id" : "TtwCore_qtprotoreg_autogen_timestamp_deps::@f69cb33fa87432acf13d",
+	"isGeneratorProvided" : true,
+	"name" : "TtwCore_qtprotoreg_autogen_timestamp_deps",
+	"paths" : 
+	{
+		"build" : "libs/Ttw/Core",
+		"source" : "libs/Ttw/Core"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

@@ -29,8 +29,9 @@ qt_add_qml_module(TtwUI
 
     RESOURCES
         fonts/FluentIcons.ttf
-        QML_FILES controls/TtwWindow.qml
-        QML_FILES controls/TtwTitleBar.qml # 将字体打包进库，App 无需关心资源路径
+        QML_FILES
+        QML_FILES controls/TtwTitleBar.qml
+        QML_FILES controls/TtwWindow.qml # 将字体打包进库，App 无需关心资源路径
 )
 
 # 如果 UI 库包含 C++ 自定义绘制 (impl 目录)

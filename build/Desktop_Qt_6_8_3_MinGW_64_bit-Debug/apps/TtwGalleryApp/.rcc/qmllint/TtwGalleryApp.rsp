@@ -1,0 +1,14 @@
+--bare
+-I
+D:/Demo/QT/TtwProject/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/apps/TtwGalleryApp
+-I
+D:/Demo/QT/TtwProject/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/qml
+-I
+E:/Qt/6.8.3/mingw_64/qml
+--resource
+D:/Demo/QT/TtwProject/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/apps/TtwGalleryApp/.qt/rcc/qmake_TtwGalleryApp.qrc
+--resource
+D:/Demo/QT/TtwProject/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/apps/TtwGalleryApp/.qt/rcc/TtwGalleryApp_raw_qml_0.qrc
+D:/Demo/QT/TtwProject/apps/TtwGalleryApp/src/Main.qml
+D:/Demo/QT/TtwProject/apps/TtwGalleryApp/src/pages/PageHome.qml
+D:/Demo/QT/TtwProject/apps/TtwGalleryApp/src/pages/PageIcons.qml

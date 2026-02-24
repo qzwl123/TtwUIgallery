@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/">
+    <file alias="/qt/qml/TtwGalleryApp">D:/Demo/QT/TtwProject/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/qml/TtwGalleryApp</file>
+
+  </qresource>
+</RCC>

@@ -1,0 +1,10 @@
+--resource
+D:/Demo/QT/TtwProject/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/libs/Ttw/UI/.qt/rcc/qmake_Ttw_UI.qrc
+--resource
+D:/Demo/QT/TtwProject/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/libs/Ttw/UI/.qt/rcc/TtwUI_raw_qml_0.qrc
+/qt/qml/Ttw/UI/controls/Button.qml
+/qt/qml/Ttw/UI/controls/TextBox.qml
+/qt/qml/Ttw/UI/Theme.qml
+/qt/qml/Ttw/UI/Icons.qml
+/qt/qml/Ttw/UI/controls/TtwTitleBar.qml
+/qt/qml/Ttw/UI/controls/TtwWindow.qml

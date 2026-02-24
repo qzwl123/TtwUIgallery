@@ -1,0 +1,9 @@
+TtwUI_autogen/timestamp: \
+	D:/Demo/QT/TtwProject/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/libs/Ttw/UI/TtwUIplugin_Ttw_UIPlugin_in.cpp \
+	D:/Demo/QT/TtwProject/libs/Ttw/UI/CMakeLists.txt \
+	E:/Qt/6.8.3/mingw_64/lib/cmake/Qt6Core/Qt6CoreConfigureFileTemplate.in \
+	E:/Qt/6.8.3/mingw_64/lib/cmake/Qt6Core/Qt6CoreResourceInit.in.cpp \
+	E:/Qt/6.8.3/mingw_64/lib/cmake/Qt6Qml/Qt6QmlModuleDirMappingTemplate.qrc.in \
+	E:/Qt/6.8.3/mingw_64/lib/cmake/Qt6Qml/Qt6QmlPluginTemplate.cpp.in \
+	E:/Qt/6.8.3/mingw_64/lib/cmake/Qt6Qml/Qt6qmldirTemplate.cmake.in \
+	E:/Qt/Tools/CMake_64/bin/cmake.exe
