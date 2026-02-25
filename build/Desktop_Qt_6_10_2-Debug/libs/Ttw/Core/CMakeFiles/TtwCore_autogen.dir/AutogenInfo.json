@@ -1,0 +1,119 @@
+{
+	"BUILD_DIR" : "/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/Core/TtwCore_autogen",
+	"CMAKE_BINARY_DIR" : "/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/Core",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/ttw/ttw/qt/TtwUIgallery/libs/Ttw/Core",
+	"CMAKE_EXECUTABLE" : "/usr/bin/cmake",
+	"CMAKE_LIST_FILES" : [ "/home/ttw/ttw/qt/TtwUIgallery/libs/Ttw/Core/CMakeLists.txt" ],
+	"CMAKE_SOURCE_DIR" : "/home/ttw/ttw/qt/TtwUIgallery",
+	"DEP_FILE" : "/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/Core/TtwCore_autogen/deps",
+	"DEP_FILE_RULE_NAME" : "TtwCore_autogen/timestamp",
+	"HEADERS" : 
+	[
+		[
+			"/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/Core/stream.qpb.h",
+			"MU",
+			"EJRQKI7XPS/moc_stream.qpb.cpp",
+			null
+		],
+		[
+			"/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/Core/stream_client.grpc.qpb.h",
+			"MU",
+			"EJRQKI7XPS/moc_stream_client.grpc.qpb.cpp",
+			null
+		]
+	],
+	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
+	"INCLUDE_DIR" : "/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/Core/TtwCore_autogen/include",
+	"MOC_COMPILATION_FILE" : "/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/Core/TtwCore_autogen/mocs_compilation.cpp",
+	"MOC_DEFINITIONS" : 
+	[
+		"QT_CORE_LIB",
+		"QT_GRPC_LIB",
+		"QT_NETWORK_LIB",
+		"QT_PROTOBUF_LIB",
+		"QT_SERIALPORT_LIB",
+		"QT_USE_PROTOBUF_LIST_ALIASES"
+	],
+	"MOC_DEPEND_FILTERS" : 
+	[
+		[
+			"Q_PLUGIN_METADATA",
+			"[\n][ \t]*Q_PLUGIN_METADATA[ \t]*\\([^\\)]*FILE[ \t]*\"([^\"]+)\""
+		]
+	],
+	"MOC_INCLUDES" : 
+	[
+		"/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/Core",
+		"/home/ttw/ttw/qt/TtwUIgallery/libs/Ttw/Core",
+		"/home/ttw/Qt/6.10.2/gcc_64/include/QtProtobuf",
+		"/home/ttw/Qt/6.10.2/gcc_64/include",
+		"/home/ttw/Qt/6.10.2/gcc_64/include/QtCore",
+		"/home/ttw/Qt/6.10.2/gcc_64/mkspecs/linux-g++",
+		"/home/ttw/Qt/6.10.2/gcc_64/include/QtGrpc",
+		"/home/ttw/Qt/6.10.2/gcc_64/include/QtNetwork",
+		"/home/ttw/Qt/6.10.2/gcc_64/include/QtSerialPort",
+		"/usr/include/c++/12",
+		"/usr/include/x86_64-linux-gnu/c++/12",
+		"/usr/include/c++/12/backward",
+		"/usr/lib/gcc/x86_64-linux-gnu/12/include",
+		"/usr/local/include",
+		"/usr/include/x86_64-linux-gnu",
+		"/usr/include"
+	],
+	"MOC_MACRO_NAMES" : 
+	[
+		"Q_OBJECT",
+		"Q_GADGET",
+		"Q_NAMESPACE",
+		"Q_NAMESPACE_EXPORT",
+		"Q_GADGET_EXPORT",
+		"Q_ENUM_NS",
+		"Q_PROTOBUF_OBJECT"
+	],
+	"MOC_OPTIONS" : [ "--output-json" ],
+	"MOC_PATH_PREFIX" : false,
+	"MOC_PREDEFS_CMD" : 
+	[
+		"/usr/bin/g++-12",
+		"-dM",
+		"-E",
+		"-c",
+		"/usr/share/cmake-3.22/Modules/CMakeCXXCompilerABI.cpp"
+	],
+	"MOC_PREDEFS_FILE" : "/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/Core/TtwCore_autogen/moc_predefs.h",
+	"MOC_RELAXED_MODE" : false,
+	"MOC_SKIP" : 
+	[
+		"/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/Core/stream_qtprotoreg.cpp"
+	],
+	"MULTI_CONFIG" : false,
+	"PARALLEL" : 4,
+	"PARSE_CACHE_FILE" : "/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/Core/CMakeFiles/TtwCore_autogen.dir/ParseCache.txt",
+	"QT_MOC_EXECUTABLE" : "/home/ttw/Qt/6.10.2/gcc_64/libexec/moc",
+	"QT_UIC_EXECUTABLE" : "",
+	"QT_VERSION_MAJOR" : 6,
+	"QT_VERSION_MINOR" : 10,
+	"SETTINGS_FILE" : "/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/Core/CMakeFiles/TtwCore_autogen.dir/AutogenUsed.txt",
+	"SOURCES" : 
+	[
+		[
+			"/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/Core/stream.qpb.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/Core/stream_client.grpc.qpb.cpp",
+			"MU",
+			null
+		]
+	],
+	"UIC_OPTIONS" : [],
+	"UIC_SEARCH_PATHS" : [],
+	"UIC_SKIP" : 
+	[
+		"/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/Core/stream_qtprotoreg.cpp"
+	],
+	"UIC_UI_FILES" : [],
+	"VERBOSITY" : 0
+}

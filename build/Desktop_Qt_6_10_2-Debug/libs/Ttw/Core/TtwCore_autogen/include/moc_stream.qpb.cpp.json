@@ -1,0 +1,114 @@
+{
+    "classes": [
+        {
+            "className": "Request",
+            "gadget": true,
+            "lineNumber": 34,
+            "properties": [
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 0,
+                    "lineNumber": 37,
+                    "name": "id_proto",
+                    "read": "id_proto",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QtProtobuf::int32",
+                    "user": false,
+                    "write": "setId_proto"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 1,
+                    "lineNumber": 38,
+                    "name": "data",
+                    "read": "data",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QByteArray",
+                    "user": false,
+                    "write": "setData"
+                }
+            ],
+            "qualifiedClassName": "routeguide::Request",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QProtobufMessage"
+                }
+            ]
+        },
+        {
+            "className": "Response",
+            "gadget": true,
+            "lineNumber": 91,
+            "properties": [
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 0,
+                    "lineNumber": 94,
+                    "name": "message",
+                    "read": "message",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QString",
+                    "user": false,
+                    "write": "setMessage"
+                }
+            ],
+            "qualifiedClassName": "routeguide::Response",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QProtobufMessage"
+                }
+            ]
+        },
+        {
+            "className": "Request_QtProtobufNested",
+            "enums": [
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "lineNumber": 82,
+                    "name": "QtProtobufFieldEnum",
+                    "values": [
+                        "Id_protoProtoFieldNumber",
+                        "DataProtoFieldNumber"
+                    ]
+                }
+            ],
+            "lineNumber": 79,
+            "namespace": true,
+            "qualifiedClassName": "routeguide::Request_QtProtobufNested"
+        },
+        {
+            "className": "Response_QtProtobufNested",
+            "enums": [
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "lineNumber": 135,
+                    "name": "QtProtobufFieldEnum",
+                    "values": [
+                        "MessageProtoFieldNumber"
+                    ]
+                }
+            ],
+            "lineNumber": 132,
+            "namespace": true,
+            "qualifiedClassName": "routeguide::Response_QtProtobufNested"
+        }
+    ],
+    "inputFile": "stream.qpb.h",
+    "outputRevision": 69
+}

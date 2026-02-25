@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/">
+    <file alias="/qt/qml/Ttw/UI">/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/qml/Ttw/UI</file>
+
+  </qresource>
+</RCC>

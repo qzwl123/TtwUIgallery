@@ -1,0 +1,7 @@
+<RCC>
+  <qresource prefix="/qt/qml/Ttw/UI/">
+    <file alias="fonts/FluentIcons.ttf">/home/ttw/ttw/qt/TtwUIgallery/libs/Ttw/UI/fonts/FluentIcons.ttf</file>
+    <file alias="SysInfo.qml.in">/home/ttw/ttw/qt/TtwUIgallery/libs/Ttw/UI/SysInfo.qml.in</file>
+  </qresource>
+</RCC>
+

@@ -1,0 +1,18 @@
+{
+    "classes": [
+        {
+            "className": "Client",
+            "lineNumber": 17,
+            "object": true,
+            "qualifiedClassName": "routeguide::RouteGuide::Client",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QGrpcClientBase"
+                }
+            ]
+        }
+    ],
+    "inputFile": "stream_client.grpc.qpb.h",
+    "outputRevision": 69
+}

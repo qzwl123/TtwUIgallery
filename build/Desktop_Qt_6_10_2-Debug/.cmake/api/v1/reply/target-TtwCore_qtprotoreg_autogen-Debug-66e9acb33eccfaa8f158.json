@@ -1,0 +1,79 @@
+{
+	"backtrace" : 0,
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : 
+		[
+			"libs/Ttw/Core/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 0,
+			"id" : "TtwCore_qtprotobufgen_deps_0::@f69cb33fa87432acf13d"
+		},
+		{
+			"id" : "TtwCore_qtprotoreg_autogen_timestamp_deps::@f69cb33fa87432acf13d"
+		}
+	],
+	"folder" : 
+	{
+		"name" : "QtInternalTargets"
+	},
+	"id" : "TtwCore_qtprotoreg_autogen::@f69cb33fa87432acf13d",
+	"isGeneratorProvided" : true,
+	"name" : "TtwCore_qtprotoreg_autogen",
+	"paths" : 
+	{
+		"build" : "libs/Ttw/Core",
+		"source" : "libs/Ttw/Core"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1,
+				2
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_10_2-Debug/libs/Ttw/Core/CMakeFiles/TtwCore_qtprotoreg_autogen",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_10_2-Debug/libs/Ttw/Core/CMakeFiles/TtwCore_qtprotoreg_autogen.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_10_2-Debug/libs/Ttw/Core/TtwCore_qtprotoreg_autogen/timestamp.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

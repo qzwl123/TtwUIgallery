@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/qt/qml/TtwGalleryApp">
+    <file alias="qmldir">/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/qml/TtwGalleryApp/qmldir</file>
+  </qresource>
+</RCC>
+

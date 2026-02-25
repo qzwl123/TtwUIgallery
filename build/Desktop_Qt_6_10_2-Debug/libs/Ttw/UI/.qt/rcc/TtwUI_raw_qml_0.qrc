@@ -1,0 +1,12 @@
+<RCC>
+  <qresource prefix="/qt/qml/Ttw/UI/">
+    <file alias="Theme.qml">/home/ttw/ttw/qt/TtwUIgallery/libs/Ttw/UI/Theme.qml</file>
+    <file alias="Icons.qml">/home/ttw/ttw/qt/TtwUIgallery/libs/Ttw/UI/Icons.qml</file>
+    <file alias="SysInfo.qml">/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/UI/SysInfo.qml</file>
+    <file alias="controls/Button.qml">/home/ttw/ttw/qt/TtwUIgallery/libs/Ttw/UI/controls/Button.qml</file>
+    <file alias="controls/TextBox.qml">/home/ttw/ttw/qt/TtwUIgallery/libs/Ttw/UI/controls/TextBox.qml</file>
+    <file alias="controls/TtwTitleBar.qml">/home/ttw/ttw/qt/TtwUIgallery/libs/Ttw/UI/controls/TtwTitleBar.qml</file>
+    <file alias="controls/TtwWindow.qml">/home/ttw/ttw/qt/TtwUIgallery/libs/Ttw/UI/controls/TtwWindow.qml</file>
+  </qresource>
+</RCC>
+

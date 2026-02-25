@@ -1,0 +1,8 @@
+<RCC>
+  <qresource prefix="/qt/qml/TtwGalleryApp/">
+    <file alias="src/Main.qml">/home/ttw/ttw/qt/TtwUIgallery/apps/TtwGalleryApp/src/Main.qml</file>
+    <file alias="src/pages/PageHome.qml">/home/ttw/ttw/qt/TtwUIgallery/apps/TtwGalleryApp/src/pages/PageHome.qml</file>
+    <file alias="src/pages/PageIcons.qml">/home/ttw/ttw/qt/TtwUIgallery/apps/TtwGalleryApp/src/pages/PageIcons.qml</file>
+  </qresource>
+</RCC>
+

@@ -1,0 +1,507 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3
+					],
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						37,
+						42,
+						43,
+						44
+					]
+				},
+				{
+					"build" : "libs/Ttw/Core",
+					"jsonFile" : "directory-libs.Ttw.Core-Debug-723b325d157dc00975b7.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "libs/Ttw/Core",
+					"targetIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					]
+				},
+				{
+					"build" : "libs/Ttw/UI",
+					"jsonFile" : "directory-libs.Ttw.UI-Debug-453e6f43cdd69ded6e0d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "libs/Ttw/UI",
+					"targetIndexes" : 
+					[
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						35,
+						36,
+						38,
+						39,
+						40,
+						41
+					]
+				},
+				{
+					"build" : "apps/TtwGalleryApp",
+					"jsonFile" : "directory-apps.TtwGalleryApp-Debug-6b7b33bd32d27dc92d1d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "apps/TtwGalleryApp",
+					"targetIndexes" : 
+					[
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					],
+					"name" : "TtwProject",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						35,
+						36,
+						37,
+						38,
+						39,
+						40,
+						41,
+						42,
+						43,
+						44
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ToolFiles::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ToolFiles-Debug-532067df2374c3cf84bf.json",
+					"name" : "ToolFiles",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "TtwCore::@f69cb33fa87432acf13d",
+					"jsonFile" : "target-TtwCore-Debug-a1dc2f1606b92ce6fb61.json",
+					"name" : "TtwCore",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "TtwCore_autogen::@f69cb33fa87432acf13d",
+					"jsonFile" : "target-TtwCore_autogen-Debug-0f24f4b866aa205aa4a4.json",
+					"name" : "TtwCore_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "TtwCore_autogen_timestamp_deps::@f69cb33fa87432acf13d",
+					"jsonFile" : "target-TtwCore_autogen_timestamp_deps-Debug-c7bf4a5c4117d8310cb3.json",
+					"name" : "TtwCore_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "TtwCore_qtgrpcgen_deps_0::@f69cb33fa87432acf13d",
+					"jsonFile" : "target-TtwCore_qtgrpcgen_deps_0-Debug-24b8f216c3ccff56ca2a.json",
+					"name" : "TtwCore_qtgrpcgen_deps_0",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "TtwCore_qtprotobufgen_deps_0::@f69cb33fa87432acf13d",
+					"jsonFile" : "target-TtwCore_qtprotobufgen_deps_0-Debug-5830de5e40c563e8bbe7.json",
+					"name" : "TtwCore_qtprotobufgen_deps_0",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "TtwCore_qtprotoreg::@f69cb33fa87432acf13d",
+					"jsonFile" : "target-TtwCore_qtprotoreg-Debug-7cb71fea94d3de25d872.json",
+					"name" : "TtwCore_qtprotoreg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "TtwCore_qtprotoreg_autogen::@f69cb33fa87432acf13d",
+					"jsonFile" : "target-TtwCore_qtprotoreg_autogen-Debug-66e9acb33eccfaa8f158.json",
+					"name" : "TtwCore_qtprotoreg_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "TtwCore_qtprotoreg_autogen_timestamp_deps::@f69cb33fa87432acf13d",
+					"jsonFile" : "target-TtwCore_qtprotoreg_autogen_timestamp_deps-Debug-898bf8758d40934e5519.json",
+					"name" : "TtwCore_qtprotoreg_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "TtwGalleryApp::@ecb6dabbc6b64eb29a98",
+					"jsonFile" : "target-TtwGalleryApp-Debug-ea9fd509127c98e3b2ca.json",
+					"name" : "TtwGalleryApp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "TtwGalleryApp_autogen::@ecb6dabbc6b64eb29a98",
+					"jsonFile" : "target-TtwGalleryApp_autogen-Debug-4874c0cc997769f401a9.json",
+					"name" : "TtwGalleryApp_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "TtwGalleryApp_autogen_timestamp_deps::@ecb6dabbc6b64eb29a98",
+					"jsonFile" : "target-TtwGalleryApp_autogen_timestamp_deps-Debug-97522a2087f937850d15.json",
+					"name" : "TtwGalleryApp_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "TtwGalleryApp_copy_qml::@ecb6dabbc6b64eb29a98",
+					"jsonFile" : "target-TtwGalleryApp_copy_qml-Debug-12db6c3399f2890a69ab.json",
+					"name" : "TtwGalleryApp_copy_qml",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "TtwGalleryApp_copy_res::@ecb6dabbc6b64eb29a98",
+					"jsonFile" : "target-TtwGalleryApp_copy_res-Debug-95c66a7a33836e78f863.json",
+					"name" : "TtwGalleryApp_copy_res",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "TtwGalleryApp_qmlimportscan::@ecb6dabbc6b64eb29a98",
+					"jsonFile" : "target-TtwGalleryApp_qmlimportscan-Debug-60e4bead095a3a9ce451.json",
+					"name" : "TtwGalleryApp_qmlimportscan",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "TtwGalleryApp_qmllint::@ecb6dabbc6b64eb29a98",
+					"jsonFile" : "target-TtwGalleryApp_qmllint-Debug-8e4a292e8b66acabb397.json",
+					"name" : "TtwGalleryApp_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "TtwGalleryApp_qmllint_json::@ecb6dabbc6b64eb29a98",
+					"jsonFile" : "target-TtwGalleryApp_qmllint_json-Debug-823d34c4b857de70be1f.json",
+					"name" : "TtwGalleryApp_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "TtwGalleryApp_qmllint_module::@ecb6dabbc6b64eb29a98",
+					"jsonFile" : "target-TtwGalleryApp_qmllint_module-Debug-c6413529053263542b45.json",
+					"name" : "TtwGalleryApp_qmllint_module",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "TtwGalleryApp_qmltyperegistration::@ecb6dabbc6b64eb29a98",
+					"jsonFile" : "target-TtwGalleryApp_qmltyperegistration-Debug-79452dae1f20b8c16ee2.json",
+					"name" : "TtwGalleryApp_qmltyperegistration",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "TtwUI::@33b093dd99acd963ddb7",
+					"jsonFile" : "target-TtwUI-Debug-16d05c972c8e713c6b16.json",
+					"name" : "TtwUI",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "TtwUI_autogen::@33b093dd99acd963ddb7",
+					"jsonFile" : "target-TtwUI_autogen-Debug-d49c7d6b3f8b6536d445.json",
+					"name" : "TtwUI_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "TtwUI_autogen_timestamp_deps::@33b093dd99acd963ddb7",
+					"jsonFile" : "target-TtwUI_autogen_timestamp_deps-Debug-894cca44e24f0cdd76e0.json",
+					"name" : "TtwUI_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "TtwUI_copy_qml::@33b093dd99acd963ddb7",
+					"jsonFile" : "target-TtwUI_copy_qml-Debug-69ba4c1018014c9d8141.json",
+					"name" : "TtwUI_copy_qml",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "TtwUI_copy_res::@33b093dd99acd963ddb7",
+					"jsonFile" : "target-TtwUI_copy_res-Debug-f1a7be2d61831a8d69ac.json",
+					"name" : "TtwUI_copy_res",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "TtwUI_qmllint::@33b093dd99acd963ddb7",
+					"jsonFile" : "target-TtwUI_qmllint-Debug-03502228c57c3e2503e6.json",
+					"name" : "TtwUI_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "TtwUI_qmllint_json::@33b093dd99acd963ddb7",
+					"jsonFile" : "target-TtwUI_qmllint_json-Debug-e9967ff79972dc580d42.json",
+					"name" : "TtwUI_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "TtwUI_qmllint_module::@33b093dd99acd963ddb7",
+					"jsonFile" : "target-TtwUI_qmllint_module-Debug-687fa4bb1aef8b70a710.json",
+					"name" : "TtwUI_qmllint_module",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "TtwUI_qmltyperegistration::@33b093dd99acd963ddb7",
+					"jsonFile" : "target-TtwUI_qmltyperegistration-Debug-3f1a65d7ac831e7e846a.json",
+					"name" : "TtwUI_qmltyperegistration",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "TtwUI_resources_1::@33b093dd99acd963ddb7",
+					"jsonFile" : "target-TtwUI_resources_1-Debug-faec31753d8bff1df91b.json",
+					"name" : "TtwUI_resources_1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "TtwUI_resources_2::@33b093dd99acd963ddb7",
+					"jsonFile" : "target-TtwUI_resources_2-Debug-f6d16f6a2f07f4cae74d.json",
+					"name" : "TtwUI_resources_2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "TtwUI_resources_3::@33b093dd99acd963ddb7",
+					"jsonFile" : "target-TtwUI_resources_3-Debug-90487681b434cdb41bcf.json",
+					"name" : "TtwUI_resources_3",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "TtwUIplugin::@33b093dd99acd963ddb7",
+					"jsonFile" : "target-TtwUIplugin-Debug-f310b850d7d81744fc6b.json",
+					"name" : "TtwUIplugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "TtwUIplugin_autogen::@33b093dd99acd963ddb7",
+					"jsonFile" : "target-TtwUIplugin_autogen-Debug-d8fa768c23f9e1d685f0.json",
+					"name" : "TtwUIplugin_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "TtwUIplugin_autogen_timestamp_deps::@33b093dd99acd963ddb7",
+					"jsonFile" : "target-TtwUIplugin_autogen_timestamp_deps-Debug-a3a86c3a3c13ab597f65.json",
+					"name" : "TtwUIplugin_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "TtwUIplugin_init::@33b093dd99acd963ddb7",
+					"jsonFile" : "target-TtwUIplugin_init-Debug-c13b5ff6e2c02c4310f9.json",
+					"name" : "TtwUIplugin_init",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "TtwUIplugin_init_autogen::@33b093dd99acd963ddb7",
+					"jsonFile" : "target-TtwUIplugin_init_autogen-Debug-3d5cc5d80a8ab1e59a0d.json",
+					"name" : "TtwUIplugin_init_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "TtwUIplugin_init_autogen_timestamp_deps::@33b093dd99acd963ddb7",
+					"jsonFile" : "target-TtwUIplugin_init_autogen_timestamp_deps-Debug-e8941963b3ef389b996c.json",
+					"name" : "TtwUIplugin_init_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_aotstats::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_aotstats-Debug-124d930bc931fc7df6da.json",
+					"name" : "all_aotstats",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "all_qmllint::@33b093dd99acd963ddb7",
+					"jsonFile" : "target-all_qmllint-Debug-bc147b44b05a7b52e227.json",
+					"name" : "all_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "all_qmllint_json::@33b093dd99acd963ddb7",
+					"jsonFile" : "target-all_qmllint_json-Debug-99d87b301110d5644b7e.json",
+					"name" : "all_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "all_qmllint_module::@33b093dd99acd963ddb7",
+					"jsonFile" : "target-all_qmllint_module-Debug-818383388755e741de5e.json",
+					"name" : "all_qmllint_module",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "all_qmltyperegistrations::@33b093dd99acd963ddb7",
+					"jsonFile" : "target-all_qmltyperegistrations-Debug-8838ae2d326ae8019e2a.json",
+					"name" : "all_qmltyperegistrations",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "generate_qmlls_build_ini_file::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-generate_qmlls_build_ini_file-Debug-2f451c0c7d330d85a0f8.json",
+					"name" : "generate_qmlls_build_ini_file",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "module_TtwGalleryApp_aotstats_target::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-module_TtwGalleryApp_aotstats_target-Debug-4323612b27936164c8b0.json",
+					"name" : "module_TtwGalleryApp_aotstats_target",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "module_TtwUI_aotstats_target::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-module_TtwUI_aotstats_target-Debug-15c30d5ee6cb25d0a1e2.json",
+					"name" : "module_TtwUI_aotstats_target",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug",
+		"source" : "/home/ttw/ttw/qt/TtwUIgallery"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

@@ -1,6 +1,0 @@
-<RCC>
-  <qresource prefix="/qt/qml/Ttw/UI">
-    <file alias="qmldir">D:/Demo/QT/TtwProject/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/qml/Ttw/UI/qmldir</file>
-  </qresource>
-</RCC>
-

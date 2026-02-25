@@ -1,0 +1,149 @@
+{
+	"BUILD_DIR" : "/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/UI/TtwUIplugin_init_autogen",
+	"CMAKE_BINARY_DIR" : "/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/UI",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/ttw/ttw/qt/TtwUIgallery/libs/Ttw/UI",
+	"CMAKE_EXECUTABLE" : "/usr/bin/cmake",
+	"CMAKE_LIST_FILES" : 
+	[
+		"/home/ttw/ttw/qt/TtwUIgallery/libs/Ttw/UI/CMakeLists.txt",
+		"/home/ttw/ttw/qt/TtwUIgallery/libs/Ttw/UI/SysInfo.qml.in",
+		"/home/ttw/Qt/6.10.2/gcc_64/lib/cmake/Qt6Core/Qt6CoreConfigureFileTemplate.in",
+		"/home/ttw/Qt/6.10.2/gcc_64/lib/cmake/Qt6Core/Qt6CoreResourceInit.in.cpp",
+		"/home/ttw/Qt/6.10.2/gcc_64/lib/cmake/Qt6Qml/Qt6QmlPluginTemplate.cpp.in",
+		"/home/ttw/Qt/6.10.2/gcc_64/lib/cmake/Qt6Qml/Qt6QmlModuleDirMappingTemplate.qrc.in",
+		"/home/ttw/Qt/6.10.2/gcc_64/lib/cmake/Qt6Core/Qt6CoreConfigureFileTemplate.in",
+		"/home/ttw/Qt/6.10.2/gcc_64/lib/cmake/Qt6Core/Qt6CoreResourceInit.in.cpp",
+		"/home/ttw/Qt/6.10.2/gcc_64/lib/cmake/Qt6Core/Qt6CoreConfigureFileTemplate.in",
+		"/home/ttw/Qt/6.10.2/gcc_64/lib/cmake/Qt6Core/Qt6CoreResourceInit.in.cpp",
+		"/home/ttw/Qt/6.10.2/gcc_64/lib/cmake/Qt6Qml/Qt6qmldirTemplate.cmake.in"
+	],
+	"CMAKE_SOURCE_DIR" : "/home/ttw/ttw/qt/TtwUIgallery",
+	"DEP_FILE" : "/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/UI/TtwUIplugin_init_autogen/deps",
+	"DEP_FILE_RULE_NAME" : "TtwUIplugin_init_autogen/timestamp",
+	"HEADERS" : [],
+	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
+	"INCLUDE_DIR" : "/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/UI/TtwUIplugin_init_autogen/include",
+	"MOC_COMPILATION_FILE" : "/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/UI/TtwUIplugin_init_autogen/mocs_compilation.cpp",
+	"MOC_DEFINITIONS" : 
+	[
+		"QT_CORE_LIB",
+		"QT_DEPRECATED_WARNINGS",
+		"QT_GUI_LIB",
+		"QT_NETWORK_LIB",
+		"QT_OPENGL_LIB",
+		"QT_PLUGIN",
+		"QT_QMLINTEGRATION_LIB",
+		"QT_QML_LIB",
+		"QT_QUICK_LIB",
+		"QT_STATICPLUGIN"
+	],
+	"MOC_DEPEND_FILTERS" : 
+	[
+		[
+			"Q_PLUGIN_METADATA",
+			"[\n][ \t]*Q_PLUGIN_METADATA[ \t]*\\([^\\)]*FILE[ \t]*\"([^\"]+)\""
+		]
+	],
+	"MOC_INCLUDES" : 
+	[
+		"/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/UI/TtwUIplugin_autogen/include",
+		"/home/ttw/Qt/6.10.2/gcc_64/include/QtQml",
+		"/home/ttw/Qt/6.10.2/gcc_64/include/QtQmlIntegration",
+		"/home/ttw/Qt/6.10.2/gcc_64/include/QtNetwork",
+		"/home/ttw/Qt/6.10.2/gcc_64/include/QtQuick",
+		"/home/ttw/Qt/6.10.2/gcc_64/include/QtGui",
+		"/home/ttw/Qt/6.10.2/gcc_64/include/QtOpenGL",
+		"/home/ttw/Qt/6.10.2/gcc_64/include",
+		"/home/ttw/Qt/6.10.2/gcc_64/include/QtCore",
+		"/home/ttw/Qt/6.10.2/gcc_64/mkspecs/linux-g++",
+		"/usr/include",
+		"/usr/include/c++/12",
+		"/usr/include/x86_64-linux-gnu/c++/12",
+		"/usr/include/c++/12/backward",
+		"/usr/lib/gcc/x86_64-linux-gnu/12/include",
+		"/usr/local/include",
+		"/usr/include/x86_64-linux-gnu"
+	],
+	"MOC_MACRO_NAMES" : 
+	[
+		"Q_OBJECT",
+		"Q_GADGET",
+		"Q_NAMESPACE",
+		"Q_NAMESPACE_EXPORT",
+		"Q_GADGET_EXPORT",
+		"Q_ENUM_NS"
+	],
+	"MOC_OPTIONS" : [ "--output-json" ],
+	"MOC_PATH_PREFIX" : false,
+	"MOC_PREDEFS_CMD" : 
+	[
+		"/usr/bin/g++-12",
+		"-dM",
+		"-E",
+		"-c",
+		"/usr/share/cmake-3.22/Modules/CMakeCXXCompilerABI.cpp"
+	],
+	"MOC_PREDEFS_FILE" : "/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/UI/TtwUIplugin_init_autogen/moc_predefs.h",
+	"MOC_RELAXED_MODE" : false,
+	"MOC_SKIP" : 
+	[
+		"/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/UI/.qt/rcc/qrc_TtwUI_raw_qml_0.cpp",
+		"/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/UI/.qt/rcc/qrc_TtwUI_raw_qml_0_init.cpp",
+		"/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/UI/.qt/rcc/qrc_TtwUI_raw_res_0.cpp",
+		"/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/UI/.qt/rcc/qrc_TtwUI_raw_res_0_init.cpp",
+		"/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/UI/.qt/rcc/qrc_qmake_Ttw_UI.cpp",
+		"/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/UI/.qt/rcc/qrc_qmake_Ttw_UI_init.cpp",
+		"/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/UI/.rcc/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/UI/SysInfo_qml.cpp",
+		"/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/UI/.rcc/qmlcache/TtwUI_Icons_qml.cpp",
+		"/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/UI/.rcc/qmlcache/TtwUI_Theme_qml.cpp",
+		"/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/UI/.rcc/qmlcache/TtwUI_controls/Button_qml.cpp",
+		"/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/UI/.rcc/qmlcache/TtwUI_controls/TextBox_qml.cpp",
+		"/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/UI/.rcc/qmlcache/TtwUI_controls/TtwTitleBar_qml.cpp",
+		"/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/UI/.rcc/qmlcache/TtwUI_controls/TtwWindow_qml.cpp",
+		"/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/UI/.rcc/qmlcache/TtwUI_qmlcache_loader.cpp",
+		"/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/UI/TtwUI_autogen/mocs_compilation.cpp",
+		"/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/UI/TtwUIplugin_autogen/mocs_compilation.cpp",
+		"/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/UI/ttwui_qmltyperegistrations.cpp"
+	],
+	"MULTI_CONFIG" : false,
+	"PARALLEL" : 4,
+	"PARSE_CACHE_FILE" : "/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/UI/CMakeFiles/TtwUIplugin_init_autogen.dir/ParseCache.txt",
+	"QT_MOC_EXECUTABLE" : "/home/ttw/Qt/6.10.2/gcc_64/libexec/moc",
+	"QT_UIC_EXECUTABLE" : "",
+	"QT_VERSION_MAJOR" : 6,
+	"QT_VERSION_MINOR" : 10,
+	"SETTINGS_FILE" : "/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/UI/CMakeFiles/TtwUIplugin_init_autogen.dir/AutogenUsed.txt",
+	"SOURCES" : 
+	[
+		[
+			"/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/UI/TtwUIplugin_init.cpp",
+			"MU",
+			null
+		]
+	],
+	"UIC_OPTIONS" : [],
+	"UIC_SEARCH_PATHS" : [],
+	"UIC_SKIP" : 
+	[
+		"/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/UI/.qt/rcc/qrc_TtwUI_raw_qml_0.cpp",
+		"/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/UI/.qt/rcc/qrc_TtwUI_raw_qml_0_init.cpp",
+		"/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/UI/.qt/rcc/qrc_TtwUI_raw_res_0.cpp",
+		"/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/UI/.qt/rcc/qrc_TtwUI_raw_res_0_init.cpp",
+		"/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/UI/.qt/rcc/qrc_qmake_Ttw_UI.cpp",
+		"/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/UI/.qt/rcc/qrc_qmake_Ttw_UI_init.cpp",
+		"/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/UI/.rcc/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/UI/SysInfo_qml.cpp",
+		"/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/UI/.rcc/qmlcache/TtwUI_Icons_qml.cpp",
+		"/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/UI/.rcc/qmlcache/TtwUI_Theme_qml.cpp",
+		"/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/UI/.rcc/qmlcache/TtwUI_controls/Button_qml.cpp",
+		"/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/UI/.rcc/qmlcache/TtwUI_controls/TextBox_qml.cpp",
+		"/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/UI/.rcc/qmlcache/TtwUI_controls/TtwTitleBar_qml.cpp",
+		"/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/UI/.rcc/qmlcache/TtwUI_controls/TtwWindow_qml.cpp",
+		"/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/UI/.rcc/qmlcache/TtwUI_qmlcache_loader.cpp",
+		"/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/UI/TtwUI_autogen/mocs_compilation.cpp",
+		"/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/UI/TtwUIplugin_autogen/mocs_compilation.cpp",
+		"/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/UI/ttwui_qmltyperegistrations.cpp"
+	],
+	"UIC_UI_FILES" : [],
+	"VERBOSITY" : 0
+}

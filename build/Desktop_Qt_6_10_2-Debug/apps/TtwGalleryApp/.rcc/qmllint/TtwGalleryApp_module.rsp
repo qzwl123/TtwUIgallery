@@ -1,0 +1,14 @@
+-I
+/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/apps/TtwGalleryApp
+-I
+/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/qml/TtwGalleryApp
+-I
+/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/qml
+-I
+/home/ttw/Qt/6.10.2/gcc_64/qml
+--resource
+/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/apps/TtwGalleryApp/.qt/rcc/qmake_TtwGalleryApp.qrc
+--resource
+/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/apps/TtwGalleryApp/.qt/rcc/TtwGalleryApp_raw_qml_0.qrc
+--module
+TtwGalleryApp

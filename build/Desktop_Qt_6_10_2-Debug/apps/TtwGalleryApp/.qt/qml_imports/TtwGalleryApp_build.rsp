@@ -1,0 +1,16 @@
+-rootPath
+/home/ttw/ttw/qt/TtwUIgallery/apps/TtwGalleryApp
+-cmake-output
+-output-file
+/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/apps/TtwGalleryApp/.qt/qml_imports/TtwGalleryApp_build.cmake
+-importPath
+/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/apps/TtwGalleryApp
+-importPath
+/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/qml/TtwGalleryApp
+-importPath
+/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/qml
+-importPath
+/home/ttw/Qt/6.10.2/gcc_64/qml
+-qrcFiles
+/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/apps/TtwGalleryApp/.qt/rcc/qmake_TtwGalleryApp.qrc
+/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/apps/TtwGalleryApp/.qt/rcc/TtwGalleryApp_raw_qml_0.qrc

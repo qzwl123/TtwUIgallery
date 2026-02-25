@@ -1,0 +1,15 @@
+{
+    "formatRevision": 1,
+    "modules": [
+        {
+            "moduleFiles": [
+                {
+                    "entries": [
+                    ],
+                    "filePath": "/home/ttw/ttw/qt/TtwUIgallery/libs/Ttw/UI/Icons.qml"
+                }
+            ],
+            "moduleId": "Ttw.UI(TtwUI)"
+        }
+    ]
+}

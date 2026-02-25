@@ -1,7 +1,0 @@
-module TtwGalleryApp
-typeinfo TtwGalleryApp.qmltypes
-prefer :/qt/qml/TtwGalleryApp/
-Main 1.0 src/Main.qml
-PageHome 1.0 src/pages/PageHome.qml
-PageIcons 1.0 src/pages/PageIcons.qml
-

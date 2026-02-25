@@ -1,0 +1,358 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "libs/Ttw/UI/CMakeFiles/TtwUIplugin_init.dir/./TtwUIplugin_init_autogen/mocs_compilation.cpp.o"
+		},
+		{
+			"path" : "libs/Ttw/UI/CMakeFiles/TtwUIplugin_init.dir/./TtwUIplugin_init.cpp.o"
+		}
+	],
+	"backtrace" : 6,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"_qt_internal_add_library",
+			"qt6_add_library",
+			"__qt_internal_add_static_plugin_init_object_library",
+			"qt6_add_qml_module",
+			"qt_add_qml_module",
+			"set_property",
+			"_qt_internal_copy_dependency_properties",
+			"__qt_internal_propagate_object_library",
+			"target_sources",
+			"qt6_extract_metatypes",
+			"qt6_finalize_target"
+		],
+		"files" : 
+		[
+			"/home/ttw/Qt/6.10.2/gcc_64/lib/cmake/Qt6Core/Qt6CoreMacros.cmake",
+			"/home/ttw/Qt/6.10.2/gcc_64/lib/cmake/Qt6/QtPublicPluginHelpers.cmake",
+			"/home/ttw/Qt/6.10.2/gcc_64/lib/cmake/Qt6Qml/Qt6QmlMacros.cmake",
+			"libs/Ttw/UI/CMakeLists.txt",
+			"/home/ttw/Qt/6.10.2/gcc_64/lib/cmake/Qt6Core/Qt6CoreMacros.cmake:848:EVAL"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 3
+			},
+			{
+				"command" : 5,
+				"file" : 3,
+				"line" : 36,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 1417,
+				"parent" : 1
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 991,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 255,
+				"parent" : 3
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 2806,
+				"parent" : 4
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 2893,
+				"parent" : 5
+			},
+			{
+				"command" : 8,
+				"file" : 2,
+				"line" : 995,
+				"parent" : 2
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 2054,
+				"parent" : 7
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 3003,
+				"parent" : 8
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 3003,
+				"parent" : 8
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 3003,
+				"parent" : 8
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 3003,
+				"parent" : 8
+			},
+			{
+				"file" : 3,
+				"line" : -1,
+				"parent" : 0
+			},
+			{
+				"command" : 11,
+				"file" : 4,
+				"line" : 1,
+				"parent" : 13
+			},
+			{
+				"command" : 10,
+				"file" : 0,
+				"line" : 909,
+				"parent" : 14
+			},
+			{
+				"command" : 9,
+				"file" : 0,
+				"line" : 1579,
+				"parent" : 15
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-DQT_QML_DEBUG -g"
+				},
+				{
+					"backtrace" : 9,
+					"fragment" : "-fPIC"
+				},
+				{
+					"fragment" : "-std=gnu++17"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 10,
+					"define" : "QT_CORE_LIB"
+				},
+				{
+					"backtrace" : 10,
+					"define" : "QT_DEPRECATED_WARNINGS"
+				},
+				{
+					"backtrace" : 10,
+					"define" : "QT_GUI_LIB"
+				},
+				{
+					"backtrace" : 10,
+					"define" : "QT_NETWORK_LIB"
+				},
+				{
+					"backtrace" : 10,
+					"define" : "QT_OPENGL_LIB"
+				},
+				{
+					"backtrace" : 10,
+					"define" : "QT_PLUGIN"
+				},
+				{
+					"backtrace" : 10,
+					"define" : "QT_QMLINTEGRATION_LIB"
+				},
+				{
+					"backtrace" : 10,
+					"define" : "QT_QML_LIB"
+				},
+				{
+					"backtrace" : 10,
+					"define" : "QT_QUICK_LIB"
+				},
+				{
+					"backtrace" : 10,
+					"define" : "QT_STATICPLUGIN"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 0,
+					"path" : "/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/UI/TtwUIplugin_init_autogen/include"
+				},
+				{
+					"backtrace" : 11,
+					"path" : "/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/UI/TtwUIplugin_autogen/include"
+				},
+				{
+					"backtrace" : 11,
+					"path" : "/home/ttw/Qt/6.10.2/gcc_64/include/QtQml"
+				},
+				{
+					"backtrace" : 11,
+					"path" : "/home/ttw/Qt/6.10.2/gcc_64/include/QtQmlIntegration"
+				},
+				{
+					"backtrace" : 11,
+					"path" : "/home/ttw/Qt/6.10.2/gcc_64/include/QtNetwork"
+				},
+				{
+					"backtrace" : 11,
+					"path" : "/home/ttw/Qt/6.10.2/gcc_64/include/QtQuick"
+				},
+				{
+					"backtrace" : 11,
+					"path" : "/home/ttw/Qt/6.10.2/gcc_64/include/QtGui"
+				},
+				{
+					"backtrace" : 11,
+					"path" : "/home/ttw/Qt/6.10.2/gcc_64/include/QtOpenGL"
+				},
+				{
+					"backtrace" : 11,
+					"isSystem" : true,
+					"path" : "/home/ttw/Qt/6.10.2/gcc_64/include"
+				},
+				{
+					"backtrace" : 11,
+					"isSystem" : true,
+					"path" : "/home/ttw/Qt/6.10.2/gcc_64/include/QtCore"
+				},
+				{
+					"backtrace" : 11,
+					"isSystem" : true,
+					"path" : "/home/ttw/Qt/6.10.2/gcc_64/mkspecs/linux-g++"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					12,
+					12
+				],
+				"standard" : "17"
+			},
+			"sourceIndexes" : 
+			[
+				0,
+				1
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"id" : "TtwUIplugin_init_autogen_timestamp_deps::@33b093dd99acd963ddb7"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "TtwUIplugin_init_autogen::@33b093dd99acd963ddb7"
+		}
+	],
+	"id" : "TtwUIplugin_init::@33b093dd99acd963ddb7",
+	"name" : "TtwUIplugin_init",
+	"paths" : 
+	{
+		"build" : "libs/Ttw/UI",
+		"source" : "libs/Ttw/UI"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files\\Generated",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				3
+			]
+		},
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				2
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				4,
+				5,
+				6
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 0,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_10_2-Debug/libs/Ttw/UI/TtwUIplugin_init_autogen/mocs_compilation.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 6,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_10_2-Debug/libs/Ttw/UI/TtwUIplugin_init.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 16,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_10_2-Debug/libs/Ttw/UI/meta_types/qt6ttwuiplugin_init_metatypes.json.gen",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_10_2-Debug/libs/Ttw/UI/TtwUIplugin_init_autogen/timestamp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_10_2-Debug/libs/Ttw/UI/meta_types/qt6ttwuiplugin_init_metatypes.json.gen.rule",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_10_2-Debug/libs/Ttw/UI/TtwUIplugin_init_autogen/timestamp.rule",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_10_2-Debug/libs/Ttw/UI/meta_types/TtwUIplugin_init_json_file_list.txt.rule",
+			"sourceGroupIndex" : 2
+		}
+	],
+	"type" : "OBJECT_LIBRARY"
+}

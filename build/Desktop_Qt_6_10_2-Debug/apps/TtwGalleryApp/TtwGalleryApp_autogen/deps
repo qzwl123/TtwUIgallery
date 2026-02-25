@@ -1,0 +1,8 @@
+TtwGalleryApp_autogen/timestamp: \
+	/home/ttw/Qt/6.10.2/gcc_64/lib/cmake/Qt6Core/Qt6CoreConfigureFileTemplate.in \
+	/home/ttw/Qt/6.10.2/gcc_64/lib/cmake/Qt6Qml/Qt6QmlModuleDirMappingTemplate.qrc.in \
+	/home/ttw/Qt/6.10.2/gcc_64/lib/cmake/Qt6Qml/Qt6qmldirTemplate.cmake.in \
+	/home/ttw/ttw/qt/TtwUIgallery/apps/TtwGalleryApp/CMakeLists.txt \
+	/home/ttw/ttw/qt/TtwUIgallery/apps/TtwGalleryApp/src/main.cpp \
+	/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/apps/TtwGalleryApp/.qt/qml_imports/TtwGalleryApp_conf.cmake \
+	/usr/bin/cmake

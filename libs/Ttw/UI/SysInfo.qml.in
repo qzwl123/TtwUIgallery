@@ -1,0 +1,9 @@
+pragma Singleton
+import QtQuick
+
+QtObject {
+    // 这里的 @XXX@ 就是占位符，CMake 稍后会自动替换它们！
+    readonly property string appVersion: "@APP_VERSION@"
+    readonly property string buildTime: "@BUILD_TIME@"
+    readonly property string gitHash: "@GIT_VERSION@"
+}

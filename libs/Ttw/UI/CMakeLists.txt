@@ -1,3 +1,20 @@
+# 解析 .in 模板，生成真实的 .qml 文件到 build 目录中
+# 因为外层 CMake 已经设置了 APP_VERSION 和 BUILD_TIME，这里的 @APP_VERSION@ 会被成功替换！
+configure_file(
+    "${CMAKE_CURRENT_SOURCE_DIR}/SysInfo.qml.in"
+    "${CMAKE_CURRENT_BINARY_DIR}/SysInfo.qml"
+    @ONLY
+)
+
+# =================================================================
+# 【核心修复代码】：必须放在 qt_add_qml_module 之前！
+# 告诉 Qt 的资源系统 (qrc)：把这个 build 目录下的绝对路径文件，
+# 在内存虚拟文件系统中重命名为 "SysInfo.qml"
+# =================================================================
+set_source_files_properties("${CMAKE_CURRENT_BINARY_DIR}/SysInfo.qml"
+    PROPERTIES QT_RESOURCE_ALIAS "SysInfo.qml"
+)
+
 # 定义库
 qt_add_library(TtwUI STATIC)
 
@@ -5,6 +22,7 @@ qt_add_library(TtwUI STATIC)
 set(MY_QML_SINGLETONS
     "Theme.qml"
     "Icons.qml"
+    "SysInfo.qml"
 )
 
 # 统一设置属性
@@ -21,17 +39,21 @@ qt_add_qml_module(TtwUI
     VERSION 1.0
     RESOURCE_PREFIX "/qt/qml"
 
+    QML_FILES        
+        Theme.qml
+        Icons.qml
+        # 在 build 目录生成的 SysInfo.qml 加进模块
+        "${CMAKE_CURRENT_BINARY_DIR}/SysInfo.qml"
     QML_FILES
         controls/Button.qml
         controls/TextBox.qml
-        Theme.qml
-        Icons.qml
-
+        controls/TtwTitleBar.qml
+        controls/TtwWindow.qml
     RESOURCES
+        # 将字体打包进库，App 无需关心资源路径
         fonts/FluentIcons.ttf
-        QML_FILES
-        QML_FILES controls/TtwTitleBar.qml
-        QML_FILES controls/TtwWindow.qml # 将字体打包进库，App 无需关心资源路径
+    RESOURCES
+        SysInfo.qml.in
 )
 
 # 如果 UI 库包含 C++ 自定义绘制 (impl 目录)

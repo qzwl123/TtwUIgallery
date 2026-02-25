@@ -1,0 +1,15 @@
+{
+    "formatRevision": 1,
+    "modules": [
+        {
+            "moduleFiles": [
+                {
+                    "entries": [
+                    ],
+                    "filePath": "/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/UI/SysInfo.qml"
+                }
+            ],
+            "moduleId": "Ttw.UI(TtwUI)"
+        }
+    ]
+}

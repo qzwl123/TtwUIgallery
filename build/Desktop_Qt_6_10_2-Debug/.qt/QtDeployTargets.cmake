@@ -1,0 +1,8 @@
+set(__QT_DEPLOY_TARGET_TtwCore_FILE /home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/Core/libTtwCore.a)
+set(__QT_DEPLOY_TARGET_TtwCore_TYPE STATIC_LIBRARY)
+set(__QT_DEPLOY_TARGET_TtwUI_FILE /home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/UI/libTtwUI.a)
+set(__QT_DEPLOY_TARGET_TtwUI_TYPE STATIC_LIBRARY)
+set(__QT_DEPLOY_TARGET_TtwUIplugin_FILE /home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/qml/Ttw/UI/libTtwUIplugin.a)
+set(__QT_DEPLOY_TARGET_TtwUIplugin_TYPE STATIC_LIBRARY)
+set(__QT_DEPLOY_TARGET_TtwGalleryApp_FILE /home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/apps/TtwGalleryApp/TtwGalleryApp)
+set(__QT_DEPLOY_TARGET_TtwGalleryApp_TYPE EXECUTABLE)

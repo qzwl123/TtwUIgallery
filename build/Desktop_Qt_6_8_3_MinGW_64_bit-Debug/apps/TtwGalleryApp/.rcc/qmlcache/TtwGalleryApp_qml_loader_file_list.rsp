@@ -1,7 +1,0 @@
---resource
-D:/Demo/QT/TtwProject/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/apps/TtwGalleryApp/.qt/rcc/qmake_TtwGalleryApp.qrc
---resource
-D:/Demo/QT/TtwProject/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/apps/TtwGalleryApp/.qt/rcc/TtwGalleryApp_raw_qml_0.qrc
-/qt/qml/TtwGalleryApp/src/Main.qml
-/qt/qml/TtwGalleryApp/src/pages/PageHome.qml
-/qt/qml/TtwGalleryApp/src/pages/PageIcons.qml

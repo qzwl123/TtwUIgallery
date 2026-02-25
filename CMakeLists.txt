@@ -27,11 +27,20 @@ endif()
 # 同步给 CMake 内置变量（可选，用于 install 等指令）
 set(PROJECT_VERSION ${APP_VERSION})
 
-# 打印状态 (注意：原代码末尾少了一个右括号)
+# 获取当前 CMake 编译配置的时间 (格式: YYYY-MM-DD HH:MM:SS)
+string(TIMESTAMP BUILD_TIME "%Y-%m-%d %H:%M:%S")
+
+message(STATUS ">>> 当前编译时间: ${BUILD_TIME}")
 message(STATUS ">>> 当前构建版本: ${APP_VERSION}")
 
-# 传递给 C++ 代码使用
-add_definitions(-DAPP_VERSION="${APP_VERSION}")
+# 传递给 C++ 代码使用 (注意：为了让 C++ 识别为字符串，必须加转义的双引号 \")
+# add_definitions(-DAPP_VERSION="${APP_VERSION}")
+# add_definitions(-DAPP_VERSION="${APP_VERSION}")
+# add_definitions(-DBUILD_TIME="${BUILD_TIME}")
+
+# (可选) 设置为缓存变量，以防子模块作用域读不到
+set(APP_VERSION ${APP_VERSION} CACHE INTERNAL "Application Git Version")
+set(BUILD_TIME ${BUILD_TIME} CACHE INTERNAL "Application Build Time")
 
 # git tag -a v0.1.1 -m "第一个版本"
 
