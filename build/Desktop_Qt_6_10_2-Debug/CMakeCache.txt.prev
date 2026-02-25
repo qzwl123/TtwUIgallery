@@ -457,9 +457,9 @@ protobuf_DIR:PATH=protobuf_DIR-NOTFOUND
 ########################
 
 //Application Git Version
-APP_VERSION:INTERNAL=af1283c-dirty
+APP_VERSION:INTERNAL=v0.1.1-dirty
 //Application Build Time
-BUILD_TIME:INTERNAL=2026-02-25 16:22:18
+BUILD_TIME:INTERNAL=2026-02-25 16:28:45
 //ADVANCED property for variable: CMAKE_ADDR2LINE
 CMAKE_ADDR2LINE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_AR

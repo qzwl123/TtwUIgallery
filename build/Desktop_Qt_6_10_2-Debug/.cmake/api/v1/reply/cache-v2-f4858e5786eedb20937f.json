@@ -11,7 +11,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "af1283c-dirty"
+			"value" : "v0.1.1-1-gae5f8a3-dirty"
 		},
 		{
 			"name" : "BUILD_TIME",
@@ -23,7 +23,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "2026-02-25 16:22:18"
+			"value" : "2026-02-25 16:30:37"
 		},
 		{
 			"name" : "CMAKE_ADDR2LINE",
