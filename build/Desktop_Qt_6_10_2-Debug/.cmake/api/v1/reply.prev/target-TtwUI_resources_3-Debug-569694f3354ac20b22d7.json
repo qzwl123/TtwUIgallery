@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "libs/Ttw/UI/CMakeFiles/TtwUI_resources_2.dir/./.qt/rcc/qrc_TtwUI_raw_qml_0_init.cpp.o"
+			"path" : "libs/Ttw/UI/CMakeFiles/TtwUI_resources_3.dir/./.qt/rcc/qrc_TtwUI_raw_res_0_init.cpp.o"
 		}
 	],
 	"backtrace" : 7,
@@ -37,7 +37,7 @@
 			{
 				"command" : 6,
 				"file" : 2,
-				"line" : 36,
+				"line" : 37,
 				"parent" : 0
 			},
 			{
@@ -55,7 +55,7 @@
 			{
 				"command" : 3,
 				"file" : 1,
-				"line" : 3839,
+				"line" : 3857,
 				"parent" : 3
 			},
 			{
@@ -238,8 +238,8 @@
 			]
 		}
 	],
-	"id" : "TtwUI_resources_2::@33b093dd99acd963ddb7",
-	"name" : "TtwUI_resources_2",
+	"id" : "TtwUI_resources_3::@33b093dd99acd963ddb7",
+	"name" : "TtwUI_resources_3",
 	"paths" : 
 	{
 		"build" : "libs/Ttw/UI",
@@ -260,7 +260,7 @@
 		{
 			"backtrace" : 7,
 			"compileGroupIndex" : 0,
-			"path" : "build/Desktop_Qt_6_10_2-Debug/libs/Ttw/UI/.qt/rcc/qrc_TtwUI_raw_qml_0_init.cpp",
+			"path" : "build/Desktop_Qt_6_10_2-Debug/libs/Ttw/UI/.qt/rcc/qrc_TtwUI_raw_res_0_init.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],
