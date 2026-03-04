@@ -9,8 +9,9 @@ singleton Icons 1.0 Icons.qml
 singleton SysInfo 1.0 SysInfo.qml
 Button 1.0 controls/Button.qml
 TextBox 1.0 controls/TextBox.qml
-TtwTitleBar 1.0 controls/TtwTitleBar.qml
-TtwWindow 1.0 controls/TtwWindow.qml
-TtwNavigationView 1.0 controls/TtwNavigationView.qml
+TtwTitleBar 1.0 controls/windowControls/TtwTitleBar.qml
+TtwWindow 1.0 controls/windowControls/TtwWindow.qml
+TtwNavigationView 1.0 controls/windowControls/TtwNavigationView.qml
+FoldingLineChart 1.0 controls/chartControls/FoldingLineChart.qml
 depends QtQuick
 

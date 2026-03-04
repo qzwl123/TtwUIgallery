@@ -64,7 +64,7 @@
                         {
                             "codegenResult": 0,
                             "column": 19,
-                            "durationMicroseconds": 7000,
+                            "durationMicroseconds": 8000,
                             "functionName": "font",
                             "line": 48,
                             "message": ""
@@ -112,7 +112,7 @@
                         {
                             "codegenResult": 0,
                             "column": 23,
-                            "durationMicroseconds": 3000,
+                            "durationMicroseconds": 1000,
                             "functionName": "text",
                             "line": 68,
                             "message": ""
@@ -152,7 +152,7 @@
                         {
                             "codegenResult": 2,
                             "column": 48,
-                            "durationMicroseconds": 0,
+                            "durationMicroseconds": 4000,
                             "functionName": "onTapped",
                             "line": 75,
                             "message": "Cannot access value for name targetWindow"
@@ -224,7 +224,7 @@
                         {
                             "codegenResult": 0,
                             "column": 20,
-                            "durationMicroseconds": 1000,
+                            "durationMicroseconds": 0,
                             "functionName": "color",
                             "line": 103,
                             "message": ""
@@ -264,7 +264,7 @@
                         {
                             "codegenResult": 0,
                             "column": 35,
-                            "durationMicroseconds": 2000,
+                            "durationMicroseconds": 0,
                             "functionName": "centerIn",
                             "line": 107,
                             "message": ""

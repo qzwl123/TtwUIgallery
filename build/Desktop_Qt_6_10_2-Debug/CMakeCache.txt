@@ -457,9 +457,9 @@ protobuf_DIR:PATH=protobuf_DIR-NOTFOUND
 ########################
 
 //Application Git Version
-APP_VERSION:INTERNAL=v0.1.1-2-gce1ada2-dirty
+APP_VERSION:INTERNAL=v0.1.1-3-ge2f1041-dirty
 //Application Build Time
-BUILD_TIME:INTERNAL=2026-03-02 16:11:11
+BUILD_TIME:INTERNAL=2026-03-04 15:11:33
 //ADVANCED property for variable: CMAKE_ADDR2LINE
 CMAKE_ADDR2LINE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_AR
@@ -1497,7 +1497,7 @@ Vulkan_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Vulkan_LIBRARY
 Vulkan_LIBRARY-ADVANCED:INTERNAL=1
 //CMAKE_INSTALL_PREFIX during last run
-_GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/usr/local
+_GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/tmp
 __qt_protobuf_macros_module_base_dir:INTERNAL=/home/ttw/Qt/6.10.2/gcc_64/lib/cmake/Qt6ProtobufTools
 __qt_qml_macros_module_base_dir:INTERNAL=/home/ttw/Qt/6.10.2/gcc_64/lib/cmake/Qt6Qml
 

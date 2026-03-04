@@ -8,7 +8,7 @@
                         {
                             "codegenResult": 0,
                             "column": 11,
-                            "durationMicroseconds": 7000,
+                            "durationMicroseconds": 2000,
                             "functionName": "font",
                             "line": 14,
                             "message": ""
@@ -80,7 +80,7 @@
                         {
                             "codegenResult": 0,
                             "column": 25,
-                            "durationMicroseconds": 1000,
+                            "durationMicroseconds": 0,
                             "functionName": "height",
                             "line": 77,
                             "message": ""

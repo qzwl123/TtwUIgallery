@@ -9,6 +9,7 @@
 /qt/qml/Ttw/UI/SysInfo.qml
 /qt/qml/Ttw/UI/controls/Button.qml
 /qt/qml/Ttw/UI/controls/TextBox.qml
-/qt/qml/Ttw/UI/controls/TtwTitleBar.qml
-/qt/qml/Ttw/UI/controls/TtwWindow.qml
-/qt/qml/Ttw/UI/controls/TtwNavigationView.qml
+/qt/qml/Ttw/UI/controls/windowControls/TtwTitleBar.qml
+/qt/qml/Ttw/UI/controls/windowControls/TtwWindow.qml
+/qt/qml/Ttw/UI/controls/windowControls/TtwNavigationView.qml
+/qt/qml/Ttw/UI/controls/chartControls/FoldingLineChart.qml

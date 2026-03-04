@@ -47,10 +47,18 @@
                         },
                         {
                             "codegenResult": 2,
+                            "column": 17,
+                            "durationMicroseconds": 0,
+                            "functionName": "series",
+                            "line": 54,
+                            "message": "Could not find property \"series\"."
+                        },
+                        {
+                            "codegenResult": 2,
                             "column": 27,
                             "durationMicroseconds": 0,
                             "functionName": "onCheckedChanged",
-                            "line": 48,
+                            "line": 80,
                             "message": "Could not find signal \"checkedChanged\"."
                         },
                         {
@@ -58,7 +66,7 @@
                             "column": 29,
                             "durationMicroseconds": 0,
                             "functionName": "windowText",
-                            "line": 47,
+                            "line": 79,
                             "message": "Could not find property \"windowText\"."
                         }
                     ],
