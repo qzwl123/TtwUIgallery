@@ -49,6 +49,7 @@ qt_add_qml_module(TtwUI
         controls/TextBox.qml
         controls/TtwTitleBar.qml
         controls/TtwWindow.qml
+        controls/TtwNavigationView.qml
     RESOURCES
         # 将字体打包进库，App 无需关心资源路径
         fonts/FluentIcons.ttf

@@ -20,5 +20,6 @@
 /home/ttw/ttw/qt/TtwUIgallery/libs/Ttw/UI/controls/TextBox.qml
 /home/ttw/ttw/qt/TtwUIgallery/libs/Ttw/UI/controls/TtwTitleBar.qml
 /home/ttw/ttw/qt/TtwUIgallery/libs/Ttw/UI/controls/TtwWindow.qml
+/home/ttw/ttw/qt/TtwUIgallery/libs/Ttw/UI/controls/TtwNavigationView.qml
 --json
 /home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/TtwUI_qmllint.json

@@ -8,7 +8,7 @@
                         {
                             "codegenResult": 0,
                             "column": 32,
-                            "durationMicroseconds": 2000,
+                            "durationMicroseconds": 5000,
                             "functionName": "titleText",
                             "line": 17,
                             "message": ""
@@ -16,7 +16,7 @@
                         {
                             "codegenResult": 0,
                             "column": 37,
-                            "durationMicroseconds": 1000,
+                            "durationMicroseconds": 4000,
                             "functionName": "backgroundColor",
                             "line": 19,
                             "message": ""

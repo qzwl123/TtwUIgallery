@@ -10,7 +10,7 @@
                             "column": 35,
                             "durationMicroseconds": 0,
                             "functionName": "targetWindow",
-                            "line": 11,
+                            "line": 12,
                             "message": "cannot convert from QQuickWindowAttached::window with type QQuickWindow to QQuickWindowQmlImpl"
                         },
                         {
@@ -18,7 +18,7 @@
                             "column": 5,
                             "durationMicroseconds": 0,
                             "functionName": "toggleMaximized",
-                            "line": 120,
+                            "line": 121,
                             "message": ""
                         },
                         {
@@ -26,7 +26,7 @@
                             "column": 19,
                             "durationMicroseconds": 0,
                             "functionName": "onTapped",
-                            "line": 22,
+                            "line": 23,
                             "message": "method toggleMaximized cannot be resolved."
                         },
                         {
@@ -34,7 +34,7 @@
                             "column": 24,
                             "durationMicroseconds": 0,
                             "functionName": "gesturePolicy",
-                            "line": 23,
+                            "line": 24,
                             "message": ""
                         },
                         {
@@ -42,7 +42,7 @@
                             "column": 26,
                             "durationMicroseconds": 0,
                             "functionName": "onActiveChanged",
-                            "line": 29,
+                            "line": 30,
                             "message": "Cannot access value for name targetWindow"
                         },
                         {
@@ -50,7 +50,7 @@
                             "column": 23,
                             "durationMicroseconds": 0,
                             "functionName": "fill",
-                            "line": 36,
+                            "line": 37,
                             "message": ""
                         },
                         {
@@ -58,15 +58,15 @@
                             "column": 19,
                             "durationMicroseconds": 0,
                             "functionName": "text",
-                            "line": 46,
+                            "line": 47,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
                             "column": 19,
-                            "durationMicroseconds": 2000,
+                            "durationMicroseconds": 7000,
                             "functionName": "font",
-                            "line": 47,
+                            "line": 48,
                             "message": ""
                         },
                         {
@@ -74,7 +74,7 @@
                             "column": 20,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 48,
+                            "line": 49,
                             "message": ""
                         },
                         {
@@ -82,7 +82,7 @@
                             "column": 32,
                             "durationMicroseconds": 0,
                             "functionName": "verticalAlignment",
-                            "line": 49,
+                            "line": 50,
                             "message": ""
                         },
                         {
@@ -90,7 +90,7 @@
                             "column": 25,
                             "durationMicroseconds": 0,
                             "functionName": "renderType",
-                            "line": 50,
+                            "line": 51,
                             "message": ""
                         },
                         {
@@ -98,23 +98,23 @@
                             "column": 20,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 62,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 60,
-                            "durationMicroseconds": 0,
-                            "functionName": "duration",
                             "line": 63,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
+                            "column": 60,
+                            "durationMicroseconds": 0,
+                            "functionName": "duration",
+                            "line": 64,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
                             "column": 23,
-                            "durationMicroseconds": 1000,
+                            "durationMicroseconds": 3000,
                             "functionName": "text",
-                            "line": 67,
+                            "line": 68,
                             "message": ""
                         },
                         {
@@ -122,23 +122,23 @@
                             "column": 24,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 70,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 29,
-                            "durationMicroseconds": 0,
-                            "functionName": "renderType",
                             "line": 71,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
+                            "column": 29,
+                            "durationMicroseconds": 0,
+                            "functionName": "renderType",
+                            "line": 72,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
                             "column": 35,
                             "durationMicroseconds": 0,
                             "functionName": "centerIn",
-                            "line": 66,
+                            "line": 67,
                             "message": ""
                         },
                         {
@@ -146,7 +146,7 @@
                             "column": 30,
                             "durationMicroseconds": 0,
                             "functionName": "family",
-                            "line": 68,
+                            "line": 69,
                             "message": ""
                         },
                         {
@@ -154,7 +154,7 @@
                             "column": 48,
                             "durationMicroseconds": 0,
                             "functionName": "onTapped",
-                            "line": 74,
+                            "line": 75,
                             "message": "Cannot access value for name targetWindow"
                         },
                         {
@@ -162,7 +162,7 @@
                             "column": 20,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 81,
+                            "line": 82,
                             "message": ""
                         },
                         {
@@ -170,7 +170,7 @@
                             "column": 60,
                             "durationMicroseconds": 0,
                             "functionName": "duration",
-                            "line": 82,
+                            "line": 83,
                             "message": ""
                         },
                         {
@@ -178,7 +178,7 @@
                             "column": 23,
                             "durationMicroseconds": 0,
                             "functionName": "text",
-                            "line": 87,
+                            "line": 88,
                             "message": "Cannot access value for name targetWindow"
                         },
                         {
@@ -186,23 +186,23 @@
                             "column": 24,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 90,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 29,
-                            "durationMicroseconds": 0,
-                            "functionName": "renderType",
                             "line": 91,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
+                            "column": 29,
+                            "durationMicroseconds": 0,
+                            "functionName": "renderType",
+                            "line": 92,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
                             "column": 35,
                             "durationMicroseconds": 0,
                             "functionName": "centerIn",
-                            "line": 85,
+                            "line": 86,
                             "message": ""
                         },
                         {
@@ -210,7 +210,7 @@
                             "column": 30,
                             "durationMicroseconds": 0,
                             "functionName": "family",
-                            "line": 88,
+                            "line": 89,
                             "message": ""
                         },
                         {
@@ -218,15 +218,15 @@
                             "column": 48,
                             "durationMicroseconds": 0,
                             "functionName": "onTapped",
-                            "line": 94,
+                            "line": 95,
                             "message": "method toggleMaximized cannot be resolved."
                         },
                         {
                             "codegenResult": 0,
                             "column": 20,
-                            "durationMicroseconds": 0,
+                            "durationMicroseconds": 1000,
                             "functionName": "color",
-                            "line": 102,
+                            "line": 103,
                             "message": ""
                         },
                         {
@@ -234,7 +234,7 @@
                             "column": 60,
                             "durationMicroseconds": 0,
                             "functionName": "duration",
-                            "line": 103,
+                            "line": 104,
                             "message": ""
                         },
                         {
@@ -242,7 +242,7 @@
                             "column": 23,
                             "durationMicroseconds": 0,
                             "functionName": "text",
-                            "line": 107,
+                            "line": 108,
                             "message": ""
                         },
                         {
@@ -250,7 +250,7 @@
                             "column": 24,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 111,
+                            "line": 112,
                             "message": ""
                         },
                         {
@@ -258,15 +258,15 @@
                             "column": 29,
                             "durationMicroseconds": 0,
                             "functionName": "renderType",
-                            "line": 112,
+                            "line": 113,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
                             "column": 35,
-                            "durationMicroseconds": 0,
+                            "durationMicroseconds": 2000,
                             "functionName": "centerIn",
-                            "line": 106,
+                            "line": 107,
                             "message": ""
                         },
                         {
@@ -274,7 +274,7 @@
                             "column": 30,
                             "durationMicroseconds": 0,
                             "functionName": "family",
-                            "line": 108,
+                            "line": 109,
                             "message": ""
                         },
                         {
@@ -282,7 +282,7 @@
                             "column": 50,
                             "durationMicroseconds": 0,
                             "functionName": "onTapped",
-                            "line": 115,
+                            "line": 116,
                             "message": "Cannot access value for name targetWindow"
                         }
                     ],
