@@ -1,0 +1,96 @@
+{
+	"backtrace" : 4,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"_qt_internal_protoc_generate",
+			"qt6_add_grpc",
+			"qt_add_grpc"
+		],
+		"files" : 
+		[
+			"/home/ttw/Qt/6.10.2/gcc_64/lib/cmake/Qt6ProtobufTools/Qt6ProtobufToolsMacros.cmake",
+			"/home/ttw/Qt/6.10.2/gcc_64/lib/cmake/Qt6GrpcTools/Qt6GrpcToolsMacros.cmake",
+			"libs/Ttw/Core/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 9,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 226,
+				"parent" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 173,
+				"parent" : 2
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 191,
+				"parent" : 3
+			}
+		]
+	},
+	"id" : "TtwCore_qtgrpcgen_deps_0::@f69cb33fa87432acf13d",
+	"name" : "TtwCore_qtgrpcgen_deps_0",
+	"paths" : 
+	{
+		"build" : "libs/Ttw/Core",
+		"source" : "libs/Ttw/Core"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1,
+				2
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 4,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_10_2-Debug/libs/Ttw/Core/CMakeFiles/TtwCore_qtgrpcgen_deps_0",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_10_2-Debug/libs/Ttw/Core/CMakeFiles/TtwCore_qtgrpcgen_deps_0.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_10_2-Debug/libs/Ttw/Core/stream_client.grpc.qpb.h.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

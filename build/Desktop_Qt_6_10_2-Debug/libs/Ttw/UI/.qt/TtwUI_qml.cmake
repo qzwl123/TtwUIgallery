@@ -12,12 +12,14 @@ set(src_and_dest_list
     "/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/qml/Ttw/UI/controls/Button.qml"
     "/home/ttw/ttw/qt/TtwUIgallery/libs/Ttw/UI/controls/TextBox.qml"
     "/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/qml/Ttw/UI/controls/TextBox.qml"
-    "/home/ttw/ttw/qt/TtwUIgallery/libs/Ttw/UI/controls/TtwTitleBar.qml"
-    "/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/qml/Ttw/UI/controls/TtwTitleBar.qml"
-    "/home/ttw/ttw/qt/TtwUIgallery/libs/Ttw/UI/controls/TtwWindow.qml"
-    "/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/qml/Ttw/UI/controls/TtwWindow.qml"
-    "/home/ttw/ttw/qt/TtwUIgallery/libs/Ttw/UI/controls/TtwNavigationView.qml"
-    "/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/qml/Ttw/UI/controls/TtwNavigationView.qml"
+    "/home/ttw/ttw/qt/TtwUIgallery/libs/Ttw/UI/controls/windowControls/TtwTitleBar.qml"
+    "/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/qml/Ttw/UI/controls/windowControls/TtwTitleBar.qml"
+    "/home/ttw/ttw/qt/TtwUIgallery/libs/Ttw/UI/controls/windowControls/TtwWindow.qml"
+    "/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/qml/Ttw/UI/controls/windowControls/TtwWindow.qml"
+    "/home/ttw/ttw/qt/TtwUIgallery/libs/Ttw/UI/controls/windowControls/TtwNavigationView.qml"
+    "/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/qml/Ttw/UI/controls/windowControls/TtwNavigationView.qml"
+    "/home/ttw/ttw/qt/TtwUIgallery/libs/Ttw/UI/controls/chartControls/FoldingLineChart.qml"
+    "/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/qml/Ttw/UI/controls/chartControls/FoldingLineChart.qml"
 
 )
 set(timestamp_file "/home/ttw/ttw/qt/TtwUIgallery/build/Desktop_Qt_6_10_2-Debug/libs/Ttw/UI/.qt/TtwUI_qml.txt")
