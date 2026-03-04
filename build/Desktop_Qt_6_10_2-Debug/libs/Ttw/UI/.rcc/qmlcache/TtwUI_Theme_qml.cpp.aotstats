@@ -48,7 +48,7 @@
                         {
                             "codegenResult": 2,
                             "column": 33,
-                            "durationMicroseconds": 0,
+                            "durationMicroseconds": 9000,
                             "functionName": "accentLight",
                             "line": 44,
                             "message": "Cannot generate efficient code for internal conversion with incompatible or ambiguous types: call to method lighter, returning QVariant -> QColor stored as QVariant"
@@ -80,7 +80,7 @@
                         {
                             "codegenResult": 2,
                             "column": 39,
-                            "durationMicroseconds": 5000,
+                            "durationMicroseconds": 0,
                             "functionName": "controlFillRest",
                             "line": 52,
                             "message": "Cannot generate efficient code for call to untyped JavaScript function"
@@ -168,7 +168,7 @@
                         {
                             "codegenResult": 2,
                             "column": 35,
-                            "durationMicroseconds": 0,
+                            "durationMicroseconds": 4000,
                             "functionName": "textSecondary",
                             "line": 69,
                             "message": "Cannot generate efficient code for call to untyped JavaScript function"
@@ -184,7 +184,7 @@
                         {
                             "codegenResult": 0,
                             "column": 28,
-                            "durationMicroseconds": 5000,
+                            "durationMicroseconds": 0,
                             "functionName": "onCompleted",
                             "line": 75,
                             "message": ""

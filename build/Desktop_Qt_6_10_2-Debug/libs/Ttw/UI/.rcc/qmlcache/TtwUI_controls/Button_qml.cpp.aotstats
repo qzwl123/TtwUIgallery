@@ -16,7 +16,7 @@
                         {
                             "codegenResult": 0,
                             "column": 11,
-                            "durationMicroseconds": 5000,
+                            "durationMicroseconds": 2000,
                             "functionName": "font",
                             "line": 15,
                             "message": ""
@@ -32,7 +32,7 @@
                         {
                             "codegenResult": 0,
                             "column": 16,
-                            "durationMicroseconds": 3000,
+                            "durationMicroseconds": 5000,
                             "functionName": "color",
                             "line": 21,
                             "message": ""
@@ -192,7 +192,7 @@
                         {
                             "codegenResult": 0,
                             "column": 24,
-                            "durationMicroseconds": 5000,
+                            "durationMicroseconds": 0,
                             "functionName": "elide",
                             "line": 80,
                             "message": ""

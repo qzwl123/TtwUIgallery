@@ -11,3 +11,4 @@
 /qt/qml/Ttw/UI/controls/TextBox.qml
 /qt/qml/Ttw/UI/controls/TtwTitleBar.qml
 /qt/qml/Ttw/UI/controls/TtwWindow.qml
+/qt/qml/Ttw/UI/controls/TtwNavigationView.qml

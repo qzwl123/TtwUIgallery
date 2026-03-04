@@ -123,7 +123,7 @@ CMAKE_INSTALL_MANDIR:PATH=
 CMAKE_INSTALL_OLDINCLUDEDIR:PATH=/usr/include
 
 //Install path prefix, prepended onto install directories.
-CMAKE_INSTALL_PREFIX:PATH=/usr/local
+CMAKE_INSTALL_PREFIX:PATH=/tmp
 
 //Run-time variable data (LOCALSTATEDIR/run)
 CMAKE_INSTALL_RUNSTATEDIR:PATH=
@@ -457,9 +457,9 @@ protobuf_DIR:PATH=protobuf_DIR-NOTFOUND
 ########################
 
 //Application Git Version
-APP_VERSION:INTERNAL=v0.1.1-1-gae5f8a3-dirty
+APP_VERSION:INTERNAL=v0.1.1-2-gce1ada2-dirty
 //Application Build Time
-BUILD_TIME:INTERNAL=2026-02-25 16:30:37
+BUILD_TIME:INTERNAL=2026-03-02 16:11:11
 //ADVANCED property for variable: CMAKE_ADDR2LINE
 CMAKE_ADDR2LINE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_AR

@@ -7,6 +7,7 @@
     <file alias="controls/TextBox.qml">/home/ttw/ttw/qt/TtwUIgallery/libs/Ttw/UI/controls/TextBox.qml</file>
     <file alias="controls/TtwTitleBar.qml">/home/ttw/ttw/qt/TtwUIgallery/libs/Ttw/UI/controls/TtwTitleBar.qml</file>
     <file alias="controls/TtwWindow.qml">/home/ttw/ttw/qt/TtwUIgallery/libs/Ttw/UI/controls/TtwWindow.qml</file>
+    <file alias="controls/TtwNavigationView.qml">/home/ttw/ttw/qt/TtwUIgallery/libs/Ttw/UI/controls/TtwNavigationView.qml</file>
   </qresource>
 </RCC>
 
