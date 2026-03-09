@@ -1,10 +1,18 @@
 # 定义可执行文件
 qt_add_executable(TtwGalleryApp
-    src/main.cpp
+    main.cpp
 
 )
 
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/src/CppSourceFiles)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/CppSourceFiles/PageChartHpp)
+
+qt_add_protobuf(TtwGalleryApp
+    PROTO_FILES "${CMAKE_SOURCE_DIR}/protos/stream.proto"
+)
+
+qt_add_grpc(TtwGalleryApp CLIENT
+    PROTO_FILES "${CMAKE_SOURCE_DIR}/protos/stream.proto"
+)
 
 # --- App 也是一个模块 ---
 # 将 App 自身也定义为 QML 模块，这样 main.cpp 加载 Main.qml 时，
@@ -15,17 +23,18 @@ qt_add_qml_module(TtwGalleryApp
     RESOURCE_PREFIX "/qt/qml"
 
     SOURCES
-       src/CppSourceFiles/ChartDataProvider.h
-       src/CppSourceFiles/ChartDataProvider.cpp
+       CppSourceFiles/PageChartHpp/ChartDataProvider.h
+       CppSourceFiles/PageChartHpp/ChartDataProvider.cpp
 
     QML_FILES
-        src/Main.qml
+        Main.qml
         # 如果有页面文件夹，全部列在这里
         src/pages/PageHome.qml
         src/pages/PageIcons.qml
         src/pages/PageChart.qml
 
         src/pages/snippets/chart/FoldingLineChartSnippet.qml
+        SOURCES CppSourceFiles/PageGrpcHpp/grpcclient.h CppSourceFiles/PageGrpcHpp/grpcclient.cpp
 )
 
 # --- 链接即配置 ---
