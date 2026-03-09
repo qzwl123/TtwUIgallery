@@ -25,6 +25,11 @@ TtwWindow {
                 page: Qt.resolvedUrl("pages/PageHome.qml")
             },
             {
+                title: "图表",
+                icon: "\uE80F",
+                page: Qt.resolvedUrl("pages/PageChart.qml")
+            },
+            {
                 title: "图标库",
                 icon: "\uE946",
                 page: Qt.resolvedUrl("pages/PageIcons.qml")

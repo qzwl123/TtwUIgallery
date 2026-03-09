@@ -57,9 +57,6 @@ set(CMAKE_AUTOUIC ON)
 # 查找所有子模块共用的 Qt 组件
 find_package(Qt6 6.5 REQUIRED COMPONENTS Core Quick Network SerialPort Protobuf Grpc Qml)
 
-
-
-
 # 自动加载，定义好 bin、lib 等路径。 必须在 find_package 下面
 qt_standard_project_setup()
 

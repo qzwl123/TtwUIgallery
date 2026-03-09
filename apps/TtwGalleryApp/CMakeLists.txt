@@ -1,7 +1,10 @@
 # 定义可执行文件
 qt_add_executable(TtwGalleryApp
     src/main.cpp
+
 )
+
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/src/CppSourceFiles)
 
 # --- App 也是一个模块 ---
 # 将 App 自身也定义为 QML 模块，这样 main.cpp 加载 Main.qml 时，
@@ -10,12 +13,19 @@ qt_add_qml_module(TtwGalleryApp
     URI "TtwGalleryApp"
     VERSION 1.0
     RESOURCE_PREFIX "/qt/qml"
+
+    SOURCES
+       src/CppSourceFiles/ChartDataProvider.h
+       src/CppSourceFiles/ChartDataProvider.cpp
+
     QML_FILES
         src/Main.qml
         # 如果有页面文件夹，全部列在这里
         src/pages/PageHome.qml
         src/pages/PageIcons.qml
+        src/pages/PageChart.qml
 
+        src/pages/snippets/chart/FoldingLineChartSnippet.qml
 )
 
 # --- 链接即配置 ---

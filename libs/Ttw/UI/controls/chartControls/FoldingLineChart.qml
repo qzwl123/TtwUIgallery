@@ -8,17 +8,13 @@ Item {
     id: root
 
     // ==========================================
-    // 1. 公开 API 配置 (多数据源升维)
+    // 1. 公开 API 配置
     // ==========================================
     property string title: "系统折线图"
-
-    // 🌟【核心改变】：使用 series 数组代替单线的 values
-    // 格式要求：[{ name: "CPU", color: "#005FB8", data: [10, 20...] }, ...]
+    // 🌟 给定默认空数组，防止外界不传报错
     property var series: []
-
     property var xLabels: []
 
-    // 全局样式默认配置
     property color lineColor: Theme.accentColor || "#005FB8"
     property real lineWidth: 2
     property bool showGrid: true
@@ -30,7 +26,6 @@ Item {
     // ==========================================
     // 2. 智能多维数据分析 (计算全局极值)
     // ==========================================
-    // 找出所有线中最长的数据长度，用于分配 X 轴
     property int maxDataLength: {
         let len = 0;
         for (let i = 0; i < series.length; i++) {
@@ -40,7 +35,6 @@ Item {
         return len === 0 ? 1 : len;
     }
 
-    // 找出所有线中的全局最高点
     property real rawMax: {
         let maxVal = -Infinity;
         for (let i = 0; i < series.length; i++) {
@@ -53,7 +47,6 @@ Item {
         return maxVal === -Infinity ? 100 : maxVal;
     }
 
-    // 找出所有线中的全局最低点
     property real rawMin: {
         let minVal = Infinity;
         for (let i = 0; i < series.length; i++) {
@@ -78,6 +71,12 @@ Item {
     property real zoomMaxY: chartMax
     property bool isZoomed: false
 
+    // ==========================================
+    //   内部状态：用于自动推算 X 轴滚动增量
+    // ==========================================
+    property int _internalXOffset: 0
+    property int _lastKnownLength: 0
+
     function resetZoom() {
         zoomMinX = 0
         zoomMaxX = Math.max(1, maxDataLength - 1)
@@ -86,136 +85,150 @@ Item {
         isZoomed = false
     }
 
-    onSeriesChanged: { if (!isZoomed) resetZoom() }
+    onSeriesChanged: {
+        if (!isZoomed) resetZoom()
+
+        // 🌟 智能 X 轴滚动推算逻辑
+        // 只有当外部没有传入 xLabels 时，才触发自动累加
+        if (!xLabels || xLabels.length === 0) {
+            let currentLen = maxDataLength;
+
+            if (_lastKnownLength === 0 || currentLen < _lastKnownLength) {
+                // 情况 A: 首次加载，或者数据被清空重置了 -> 归零
+                _internalXOffset = 0;
+                _lastKnownLength = currentLen;
+            } else if (currentLen === _lastKnownLength && currentLen > 0) {
+                // 情况 B: 长度达到最大值(如 15)并维持不变，且数据刷新了 -> 说明数据向左滑动了一步！
+                _internalXOffset += 1;
+            } else if (currentLen > _lastKnownLength) {
+                // 情况 C: 数据点还在增长阶段 (比如从 1 涨到 15) -> 正常更新记录，不加偏移
+                _lastKnownLength = currentLen;
+            }
+        } else {
+            // 如果外部传了 xLabels，内部偏移量归零，完全听外部的
+            _internalXOffset = 0;
+        }
+    }
 
     // ==========================================
-    // 4. 布局划分 (Title / Y-Axis / X-Axis / Chart)
+    // 4. 布局划分
     // ==========================================
-    // --- 4.1 顶部标题 ---
-        Text {
-            id: titleLabel
-            text: root.title + (root.isZoomed ? " (右键还原)" : "")
-            font.family: Theme.fontBody ? Theme.fontBody.family : "sans-serif"
-            font.pixelSize: 18
-            font.bold: true
-            color: Theme.textPrimary || "#000000"
+    Text {
+        id: titleLabel
+        text: root.title + (root.isZoomed ? " (右键还原)" : "")
+        font.family: Theme.fontBody ? Theme.fontBody.family : "sans-serif"
+        font.pixelSize: 18
+        font.bold: true
+        color: Theme.textPrimary || "#000000"
+        anchors.top: parent.top
+        anchors.horizontalCenter: parent.horizontalCenter
+        height: text === "" ? 0 : 30
+    }
 
-            anchors.top: parent.top
-            // 🌟【修改】：改为水平居中对齐整个组件
-            anchors.horizontalCenter: parent.horizontalCenter
-
-            height: text === "" ? 0 : 30
-        }
-
-        // --- 4.2 动态图例区 (Legend) ---
-        Row {
-            id: legendRow
-            anchors.top: titleLabel.bottom
-            anchors.topMargin: 4
-
-            // 🌟【修改】：改为水平居中对齐整个组件
-            anchors.horizontalCenter: parent.horizontalCenter
-
-            spacing: 20
-            height: root.series.length > 0 ? 20 : 0
-            visible: root.series.length > 0
-
-            Repeater {
-                model: root.series
-                Row {
-                    spacing: 6
-                    anchors.verticalCenter: parent.verticalCenter
-                    Rectangle {
-                        width: 10; height: 10; radius: 5
-                        color: modelData.color || root.lineColor
-                        anchors.verticalCenter: parent.verticalCenter
-                    }
-                    Text {
-                        text: modelData.name || "数据 " + (index + 1)
-                        font.pixelSize: 12
-                        color: Theme.textSecondary || "#666666"
-                        anchors.verticalCenter: parent.verticalCenter
-                    }
-                }
-            }
-        }
-        // --- 4.3 左侧 Y 轴刻度区 ---
-        Item {
-            id: yAxisArea
-            width: 40
-            // 🌟【关键修改】：Y轴的顶部现在锚定在图例(legendRow)的下方，给图例让出空间
-            anchors.top: legendRow.bottom
-            anchors.bottom: xAxisArea.top
-            anchors.left: parent.left
-            anchors.topMargin: 16 // 距离图例稍微留点空隙
-
-            Repeater {
-                model: root.yAxisTickCount
-                Text {
-                    property real tickVal: root.zoomMinY + ((root.zoomMaxY - root.zoomMinY) / (root.yAxisTickCount - 1)) * index
-                    text: Math.round(tickVal)
-                    font.pixelSize: 12
-                    color: Theme.textSecondary || "#666666"
-                    anchors.right: parent.right
-                    anchors.rightMargin: 8
-                    y: yAxisArea.height - (index * (yAxisArea.height / (root.yAxisTickCount - 1))) - height / 2
-                }
-            }
-        }
-
-
-
-    Item {
-        id: xAxisArea
-        height: 30
-        anchors.bottom: parent.bottom; anchors.left: chartArea.left; anchors.right: chartArea.right
-        clip: true
+    Row {
+        id: legendRow
+        anchors.top: titleLabel.bottom
+        anchors.topMargin: 4
+        anchors.horizontalCenter: parent.horizontalCenter
+        spacing: 20
+        height: root.series.length > 0 ? 20 : 0
+        visible: root.series.length > 0
 
         Repeater {
-            model: root.xLabels.length > 0 ? root.xLabels : root.maxDataLength
-            Text {
-                text: root.xLabels.length > 0 ? root.xLabels[index] : (index + 1).toString()
-                font.pixelSize: 12
-                color: Theme.textSecondary || "#666666"
-                x: chartArea.getX(index) - width / 2
+            model: root.series
+            Row {
+                spacing: 6
                 anchors.verticalCenter: parent.verticalCenter
-                opacity: (x + width > 0 && x < xAxisArea.width) ? 1 : 0
+                Rectangle {
+                    width: 10; height: 10; radius: 5
+                    color: modelData.color || root.lineColor
+                    anchors.verticalCenter: parent.verticalCenter
+                }
+                Text {
+                    text: modelData.name || "数据 " + (index + 1)
+                    font.pixelSize: 12
+                    color: Theme.textSecondary || "#666666"
+                    anchors.verticalCenter: parent.verticalCenter
+                }
             }
         }
     }
 
-    // --- 4.4 核心图表绘制区 ---
     Item {
-            id: chartArea
-            anchors.top: yAxisArea.top; anchors.bottom: yAxisArea.bottom
-            anchors.left: yAxisArea.right; anchors.right: parent.right
-            anchors.rightMargin: 10
+        id: yAxisArea
+        width: 40
+        anchors.top: legendRow.bottom
+        anchors.bottom: xAxisArea.top
+        anchors.left: parent.left
+        anchors.topMargin: 16
+
+        Repeater {
+            model: root.yAxisTickCount
+            Text {
+                property real tickVal: root.zoomMinY + ((root.zoomMaxY - root.zoomMinY) / (root.yAxisTickCount - 1)) * index
+                text: Math.round(tickVal)
+                font.pixelSize: 12
+                color: Theme.textSecondary || "#666666"
+                anchors.right: parent.right
+                anchors.rightMargin: 8
+                y: yAxisArea.height - (index * (yAxisArea.height / (root.yAxisTickCount - 1))) - height / 2
+            }
+        }
+    }
+
+    // 🌟 终极防越界的 X 轴组件
+    Item {
+            id: xAxisArea
+            height: 30
+            anchors.bottom: parent.bottom; anchors.left: chartArea.left; anchors.right: chartArea.right
             clip: true
 
-            function getX(index) {
-                let rangeX = root.zoomMaxX - root.zoomMinX;
-                if (rangeX === 0) return 0;
-                return ((index - root.zoomMinX) / rangeX) * width;
-            }
-            function getY(value) {
-                let rangeY = root.zoomMaxY - root.zoomMinY;
-                if (rangeY === 0) return height;
-                return height - ((value - root.zoomMinY) / rangeY) * height;
-            }
+            Repeater {
+                model: root.maxDataLength
+                Text {
+                    // 🌟 终极兜底逻辑：
+                    // 如果有 xLabels，就用 xLabels[index]
+                    // 如果没有，就用 (当前索引 + 1 + 内部滚动偏移量)
+                    text: (root.xLabels && index < root.xLabels.length)
+                          ? root.xLabels[index]
+                          : (index + 1 + root._internalXOffset).toString()
 
-            // 🌟【新增】：给折线图圈起一个外框
-            Rectangle {
-                anchors.fill: parent
-                color: "transparent" // 背景透明，只留边框
-                border.color: Theme.borderRest || "#CCCCCC" // 边框颜色，可以跟随你的主题
-                border.width: 1
-                z: 99 // 让边框显示在最上层，防止被里面的渐变填充遮挡边缘
-
-                // 【可选】：如果你想阻止用户的鼠标点到外框上导致交互失效，加上这句
-                MouseArea { anchors.fill: parent; acceptedButtons: Qt.NoButton }
+                    font.pixelSize: 12
+                    color: Theme.textSecondary || "#666666"
+                    x: chartArea.getX(index) - width / 2
+                    anchors.verticalCenter: parent.verticalCenter
+                    opacity: (x + width > 0 && x < xAxisArea.width) ? 1 : 0
+                }
             }
+        }
 
-        // --- 1. 背景水平网格线 ---
+    // --- 4.4 核心图表绘制区 ---
+    Item {
+        id: chartArea
+        anchors.top: yAxisArea.top; anchors.bottom: yAxisArea.bottom
+        anchors.left: yAxisArea.right; anchors.right: parent.right
+        anchors.rightMargin: 10
+        clip: true
+
+        function getX(index) {
+            let rangeX = root.zoomMaxX - root.zoomMinX;
+            if (rangeX === 0) return 0;
+            return ((index - root.zoomMinX) / rangeX) * width;
+        }
+        function getY(value) {
+            let rangeY = root.zoomMaxY - root.zoomMinY;
+            if (rangeY === 0) return height;
+            return height - ((value - root.zoomMinY) / rangeY) * height;
+        }
+
+        Rectangle {
+            anchors.fill: parent
+            color: "transparent"
+            border.color: Theme.borderRest || "#CCCCCC"
+            border.width: 1
+            z: 99
+        }
+
         Repeater {
             model: root.showGrid ? root.yAxisTickCount : 0
             Rectangle {
@@ -225,7 +238,6 @@ Item {
             }
         }
 
-        // 🌟【核心改造 1】：循环画每一条折线与背景
         Repeater {
             model: root.series
 
@@ -235,7 +247,6 @@ Item {
                 layer.enabled: true
                 layer.samples: 4
 
-                // 提取单条线的数据和颜色
                 property var sData: modelData.data || []
                 property color sColor: modelData.color || root.lineColor
 
@@ -279,11 +290,11 @@ Item {
             }
         }
 
-        // --- 2. 交互画框底层 ---
         MouseArea {
             id: zoomMouseArea
             anchors.fill: parent
             acceptedButtons: Qt.LeftButton | Qt.RightButton
+            preventStealing: true
 
             property real startX: 0
             property real startY: 0
@@ -335,7 +346,6 @@ Item {
             visible: false
         }
 
-        // 🌟【核心改造 2】：嵌套循环画每条线上的点
         Repeater {
             model: root.series
 
@@ -363,10 +373,10 @@ Item {
 
                         visible: exactX >= 0 && exactX <= chartArea.width && exactY >= 0 && exactY <= chartArea.height
 
-                        Behavior on scale { NumberAnimation { duration: 150; easing.type: Easing.OutBack } }
+                        // 去掉缩放动画，因为高频刷新时会导致小圆点频繁弹跳，影响性能和视觉
+                        // Behavior on scale { NumberAnimation { duration: 150; easing.type: Easing.OutBack } }
 
                         ToolTip.visible: dotMouseArea.containsMouse
-                        // 🌟 显示名字和数值，例如： CPU: 45
                         ToolTip.text: (currentSeries.name ? currentSeries.name + ": " : "") + sData[index].toString()
                         ToolTip.delay: 100
 

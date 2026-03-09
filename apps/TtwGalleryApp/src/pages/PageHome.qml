@@ -43,35 +43,6 @@ ColumnLayout {
 
 
 
-    FoldingLineChart {
-        Layout.fillWidth: true
-        Layout.preferredHeight: 350
-
-        title: "多系统资源占用对比"
-        // xLabels: ["周一", "周二", "周三", "周四", "周五", "周六", "周日"]
-
-        // 注入多条数据源！
-        series: [
-            {
-                name: "CPU负载",
-                color: "#005FB8", // WinUI 蓝
-                data: [20, 45, 88, 55, 30, 10, 5]
-            },
-            {
-                name: "内存使用率",
-                color: "#107C10", // Xbox 绿
-                data: [40, 42, 45, 60, 65, 50, 48]
-            },
-            {
-                name: "磁盘 I/O",
-                color: "#E81123", // 警告红
-                data: [5, 10, 15, 8, 12, 5, 2]
-            }
-        ]
-
-        showFill: true  // 开启填充（多线叠在一起会形成漂亮的半透明混合效果）
-        showLine: true  // 开启 带线
-    }
 
     // --- 主题切换 ---
     Basic.Switch {

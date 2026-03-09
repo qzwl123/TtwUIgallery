@@ -47,6 +47,7 @@ qt_add_qml_module(TtwUI
     QML_FILES
         controls/Button.qml
         controls/TextBox.qml
+        controls/Expander.qml
 
         controls/windowControls/TtwTitleBar.qml
         controls/windowControls/TtwWindow.qml
@@ -58,7 +59,14 @@ qt_add_qml_module(TtwUI
         fonts/FluentIcons.ttf
     RESOURCES
         SysInfo.qml.in
+
+    SOURCES
+        CppSourceFiles/chart/fileio.h
+        CppSourceFiles/chart/fileio.cpp
 )
+
+target_include_directories(TtwUI PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/CppSourceFiles/chart)
+target_include_directories(TtwUIplugin PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/CppSourceFiles/chart)
 
 # 如果 UI 库包含 C++ 自定义绘制 (impl 目录)
 target_sources(TtwUI PRIVATE
