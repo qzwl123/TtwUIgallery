@@ -4,7 +4,10 @@ qt_add_executable(TtwGalleryApp
 
 )
 
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/CppSourceFiles/PageChartHpp)
+include_directories(
+    ${CMAKE_CURRENT_SOURCE_DIR}/CppSourceFiles/PageChartHpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/CppSourceFiles/PageGrpcHpp
+)
 
 qt_add_protobuf(TtwGalleryApp
     PROTO_FILES "${CMAKE_SOURCE_DIR}/protos/stream.proto"
@@ -26,6 +29,10 @@ qt_add_qml_module(TtwGalleryApp
        CppSourceFiles/PageChartHpp/ChartDataProvider.h
        CppSourceFiles/PageChartHpp/ChartDataProvider.cpp
 
+    SOURCES
+        CppSourceFiles/PageGrpcHpp/grpcclient.h
+        CppSourceFiles/PageGrpcHpp/grpcclient.cpp
+
     QML_FILES
         Main.qml
         # 如果有页面文件夹，全部列在这里
@@ -34,7 +41,7 @@ qt_add_qml_module(TtwGalleryApp
         src/pages/PageChart.qml
 
         src/pages/snippets/chart/FoldingLineChartSnippet.qml
-        SOURCES CppSourceFiles/PageGrpcHpp/grpcclient.h CppSourceFiles/PageGrpcHpp/grpcclient.cpp
+
 )
 
 # --- 链接即配置 ---
