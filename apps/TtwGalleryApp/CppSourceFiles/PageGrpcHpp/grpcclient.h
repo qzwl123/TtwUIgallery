@@ -5,6 +5,8 @@
 #include <QQmlEngine>
 #include <QGrpcCallReply>
 #include <QDebug>
+#include <QJSEngine>
+
 
 #include "stream.qpb.h"
 #include "stream_client.grpc.qpb.h"
@@ -15,18 +17,15 @@ class GrpcClient : public QObject
     QML_ELEMENT
     QML_SINGLETON
 
-    Q_PROPERTY(QString responseText READ responseText NOTIFY responseTextChanged)
-    Q_PROPERTY(bool isLoading READ isLoading NOTIFY isLoadingChanged)
+    // Q_PROPERTY(QString responseText READ responseText NOTIFY responseTextChanged)
+    // Q_PROPERTY(bool isLoading READ isLoading NOTIFY isLoadingChanged)
 
 signals:
-    void responseTextChanged();
-    void isLoadingChanged();
+    // void responseTextChanged();
+    // void isLoadingChanged();
 
 public:
-    explicit GrpcClient(QObject *parent = nullptr);
-
-    // 注入gRPC 客户端实例
-    void setGrpcClient(routeguide::RouteGuide::Client *client);
+    explicit GrpcClient(std::shared_ptr<QAbstractGrpcChannel> channel);
 
     template<typename Reply>
     ///
@@ -50,18 +49,21 @@ public:
 
 
     Q_INVOKABLE void fetchGreeting(const QString &name);
-    QString responseText() const { return m_responseText; }
-    bool isLoading() const { return m_isLoading; }
-
+    // QString responseText() const { return m_responseText; }
+    // bool isLoading() const { return m_isLoading; }
 private:
-    QString m_responseText;
-    bool m_isLoading = false;
-
+/*    QString m_responseText;
+    bool m_isLoading = false*/;
 
     // 必须管理 Reply 对象的生命周期，否则请求会被意外取消
     std::unique_ptr<QGrpcCallReply> m_currentReply;
     // 保存底层的 gRPC 客户端指针
-    routeguide::RouteGuide::Client *m_grpcClient = nullptr; // 命名规则：包名::服务名::Client
+    routeguide::RouteGuide::Client m_grpcClient; // 命名规则：包名::服务名::Client
+
+
+public :
+    // 提供一个全局访问点，方便我们在 main.cpp 中注入 gRPC client
+    // static GrpcClient *instance();
 };
 
 #endif // GRPCCLIENT_H

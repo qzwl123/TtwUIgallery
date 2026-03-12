@@ -1,6 +1,9 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 
+#include <QGrpcHttp2Channel>
+#include "stream_client.grpc.qpb.h"
+#include "grpcclient.h"
 
 int main(int argc, char *argv[])
 {
@@ -9,6 +12,19 @@ int main(int argc, char *argv[])
     // qputenv("QML_XHR_ALLOW_FILE_READ", "1");
 
     QGuiApplication app(argc, argv);
+
+    auto channel = std::make_shared<QGrpcHttp2Channel>(
+        QUrl("http://127.0.0.1:5200")
+        );
+
+    GrpcClient clientGuide(channel);
+    clientGuide.fetchGreeting("tsstw");
+
+    // 【核心修改】替换 setContextProperty
+    // 参数：QML 导入的包名, 主版本号, 次版本号, QML 中使用的类名, C++ 实例指针
+    // qmlRegisterSingletonInstance("App.ViewModels", 1, 0, "UserVM", &userViewModel);
+
+    // GrpcClient::instance()->setGrpcClient(channel);
 
     QQmlApplicationEngine engine;
     QObject::connect(

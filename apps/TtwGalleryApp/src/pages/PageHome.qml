@@ -18,7 +18,8 @@ ColumnLayout {
         spacing: 10
         Button {
             text: "Standard Button"
-            onClicked: console.log("Standard clicked")
+            onClicked: GrpcClient.fetchGreeting('ttw')
+            // onClicked: console.log("Standard clicked")
         }
 
         Button {
