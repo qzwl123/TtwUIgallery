@@ -1,0 +1,44 @@
+FoldingLineChart {
+    Layout.fillWidth: true
+    Layout.preferredHeight: 350
+
+    title: "多系统资源占用对比"
+    xLabels: ["周一", "周二", "周三", "周四", "周五", "周六", "周日"]
+
+    // 注入多条数据源
+    series: [
+        { name: "CPU负载", color: "#005FB8", data: [20, 45, 88, 55, 30, 10, 5] },
+        { name: "内存使用率", color: "#107C10", data: [40, 42, 45, 60, 65, 50, 48] },
+        { name: "磁盘 I/O", color: "#E81123", data: [5, 10, 15, 8, 12, 5, 2] }
+    ]
+
+    showFill: true
+    showLine: true
+}
+
+------------------------------- 分割线 -------------------------------
+
+FoldingLineChart {
+    anchors.fill: parent
+    anchors.margins: 20 // 留出一点内边距
+
+    title: "多系统资源占用对比"
+    // xLabels: ["周一", "周二", "周三", "周四", "周五", "周六", "周日"]
+
+    // 直接绑定 C++ 后台的动态属性
+    series: ChartDataProvider.dynamicSeries
+    // showFill: true
+    // showLine: true
+
+    // 🌟 2. 为了直观测试，我们在图表右上角加个刷新按钮
+    Button {
+        text: "🎲 刷新随机数据"
+        anchors.top: parent.top
+        anchors.right: parent.right
+        onClicked: {
+            // 调用 C++ 方法重新生成随机数
+            ChartDataProvider.generateRandomData()
+        }
+    }
+}
+

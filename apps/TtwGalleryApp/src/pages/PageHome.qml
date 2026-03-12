@@ -3,6 +3,8 @@ import QtQuick.Layouts
 import QtQuick.Controls 2.15 as Basic
 import Ttw.UI
 
+import MygRPC 1.0
+
 // 这是一个内容页面
 ColumnLayout {
     spacing: 20

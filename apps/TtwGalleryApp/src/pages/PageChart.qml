@@ -92,7 +92,7 @@ Item {
                 isExpanded: false
 
                 // 🌟 直接让 Expander 去读我们写好的独立文件！
-                codeSource: Qt.resolvedUrl("snippets/chart/FoldingLineChartSnippet.qml")
+                codeSource: Qt.resolvedUrl("snippets/chart/FoldingLineChartSnippet.txt") // qml
             }
 
             // 底部留白弹簧，防止内容贴底

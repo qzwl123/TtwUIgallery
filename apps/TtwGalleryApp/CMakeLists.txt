@@ -40,7 +40,7 @@ qt_add_qml_module(TtwGalleryApp
         src/pages/PageIcons.qml
         src/pages/PageChart.qml
 
-        src/pages/snippets/chart/FoldingLineChartSnippet.qml
+        src/pages/snippets/chart/FoldingLineChartSnippet.txt
 
 )
 

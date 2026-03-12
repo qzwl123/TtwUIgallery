@@ -20,11 +20,8 @@ int main(int argc, char *argv[])
     GrpcClient clientGuide(channel);
     clientGuide.fetchGreeting("tsstw");
 
-    // 【核心修改】替换 setContextProperty
-    // 参数：QML 导入的包名, 主版本号, 次版本号, QML 中使用的类名, C++ 实例指针
-    // qmlRegisterSingletonInstance("App.ViewModels", 1, 0, "UserVM", &userViewModel);
-
-    // GrpcClient::instance()->setGrpcClient(channel);
+    // 2. 将你创建的实例注册为 QML 单例 (URI, 主版本号, 次版本号, QML中的名字, 实例指针)
+    qmlRegisterSingletonInstance("MygRPC", 1, 0, "GrpcClient", &clientGuide);
 
     QQmlApplicationEngine engine;
     QObject::connect(
