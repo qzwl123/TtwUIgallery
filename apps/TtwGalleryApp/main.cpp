@@ -20,6 +20,7 @@ int main(int argc, char *argv[])
     GrpcClient clientGuide(channel);
     clientGuide.fetchGreeting("tsstw");
 
+
     // 2. 将你创建的实例注册为 QML 单例 (URI, 主版本号, 次版本号, QML中的名字, 实例指针)
     qmlRegisterSingletonInstance("MygRPC", 1, 0, "GrpcClient", &clientGuide);
 

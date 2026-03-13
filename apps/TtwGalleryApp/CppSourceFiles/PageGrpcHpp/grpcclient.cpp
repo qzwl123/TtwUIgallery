@@ -4,55 +4,68 @@ GrpcClient::GrpcClient(std::shared_ptr<QAbstractGrpcChannel> channel) {
     m_grpcClient.attachChannel(std::move(channel));
 }
 
-// 必须在 .cpp 文件中实现这个静态方法
-// GrpcClient* GrpcClient::instance() {
-//     // 推荐使用 C++11 线程安全的局部静态变量 (Meyers Singleton)
-//     static GrpcClient _instance;
-//     return &_instance;
-// }
-
 template<typename Reply>
 void GrpcClient::handleReply(std::unique_ptr<QGrpcCallReply> reply,
-                             std::function<void(const Reply &)> onSuccess) {
+                             std::function<void(const Reply &)> onMessage,
+                             std::function<void(const QGrpcStatus &)> onFinished) {
 
     const auto *replyPtr = reply.get();
     QObject::connect(replyPtr, &QGrpcCallReply::finished, replyPtr,
-                     [reply = std::move(reply), onSuccess](const QGrpcStatus &status)mutable{
-        if(!status.isOk()) {
-            qDebug() << "[ gRPC::handleReply ] error :" << status.message();
-            return ;
+                    [reply = std::move(reply), onMessage, onFinished](const QGrpcStatus &status) {
+
+        if(onFinished) {
+            onFinished(status);
+        } else {
+            if (status.isOk())
+                qDebug("Client (handleReply) finished");
+            else
+                qDebug() << "[ gRPC::handleReply ] error :" << status.message();
+                // qDebug() << "Client (ServerStreaming) failed:" << status;
         }
 
-        auto respOpt = reply->read<Reply>();
-        if(respOpt) {
-            onSuccess(*respOpt);
+        if( auto response = reply->read<Reply>()) {
+            onMessage(*response);
         } else {
             qDebug() << "[ gRPC::handleReply ]returned : empty reply";
         }
 
     },
-    // 6. 核心魔法：执行一次后自动销毁 Lambda 和内部的 unique_ptr！
-    Qt::SingleShotConnection
-    );
+    // 执行一次后自动销毁 Lambda 和内部的 unique_ptr！
+    Qt::SingleShotConnection);
 }
 
 template<typename Reply>
-void GrpcClient::handleStreamReply(std::unique_ptr<QGrpcServerStream> reply,
+void GrpcClient::handleStreamReply(std::unique_ptr<QGrpcServerStream> stream,
                        std::function<void(const Reply&)> onMessage,
                        std::function<void(const QGrpcStatus &)> onFinished) {
 
-    QObject::connect(reply.get(), &QGrpcServerStream::messageReceived,
-                     [s_reply = reply.get(), onMessage]() mutable{
 
-        while(auto msg = s_reply->read<Reply>()) {
-            onMessage(*msg);
+    const auto *streamPtr = stream.get();
+
+    QObject::connect(streamPtr, &QGrpcServerStream::finished, streamPtr,
+                    [stream = std::move(stream), onFinished](const QGrpcStatus &status){
+
+        if(onFinished) {
+            onFinished(status);
+        } else {
+            if (status.isOk())
+                qDebug("Client (ServerStreaming) finished");
+            else
+                qDebug() << "Client (ServerStreaming) failed:" << status;
         }
+    },
+    Qt::SingleShotConnection);
 
-    });
 
-    QObject::connect(reply.get(), &QGrpcServerStream::finished,
-                     [reply = std::move(reply), onFinished](const QGrpcStatus &status){
-        onFinished(status);
+    QObject::connect(streamPtr, &QGrpcServerStream::messageReceived,
+                     streamPtr, [streamPtr, onMessage]() {
+
+        if (const auto response = streamPtr->read<Reply>()) {
+            onMessage(*response); // Client (ServerStream) received
+        }
+        else {
+            qDebug("Client (ServerStream) deserialization failed");
+        }
     });
 
 }
@@ -79,22 +92,21 @@ void GrpcClient::fetchGreeting(const QString &name) {
         qDebug() << "[gRPC::fetchGreeting] recv masg : " << resp.message();
     });
 
-
-
 /*
-    auto s_reply = m_grpcClient->ListFeatures(req);
-
     handleStreamReply<routeguide::Response>(
-        std::move(s_reply),
+        m_grpcClient.ListFeatures(req),
+
         [](const routeguide::Response &resp){
-            qDebug() << "Feature:" << resp.message();
-        },
-        [](const QGrpcStatus &status){
-            if (!status.isOk())
-                qDebug() << "Stream error:" << status.message();
-            else
-                qDebug() << "Stream finished successfully";
-    });
+            qDebug() << "Stream : " << resp.message();
+        }
+
+        // ,[](const QGrpcStatus &status){
+        //     if (!status.isOk())
+        //         qDebug() << "Stream error:" << status.message();
+        //     else
+        //         qDebug() << "Stream finished successfully";
+        // }
+      );
 */
     return ;
 }
