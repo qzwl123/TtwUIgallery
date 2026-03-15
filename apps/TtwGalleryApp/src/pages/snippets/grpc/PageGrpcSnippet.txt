@@ -1,0 +1,39 @@
+Item {
+    property string expandedMode: "unary"
+
+    Basic.ScrollView {
+        ColumnLayout {
+            SurfaceCard {
+                // Overview and channel status
+            }
+
+            Expander {
+                title: "Unary Call - sayHello"
+                autoToggle: false
+                isExpanded: root.expandedMode === "unary"
+
+                GridLayout {
+                    SurfaceCard {
+                        // Request composer
+                        TextBox { id: idField }
+                        TextBox { id: dataField }
+                        Button {
+                            text: "Send sayHello"
+                            onClicked: GrpcClient.onsayHello(root.normalizedId(), dataField.text)
+                        }
+                    }
+
+                    SurfaceCard {
+                        // Latest result
+                        Text { text: GrpcClient.lastStatusText }
+                        Text { text: GrpcClient.lastMessage }
+                    }
+                }
+            }
+
+            Expander { title: "Server Streaming - ListFeatures" }
+            Expander { title: "Client Streaming - RecordRoute" }
+            Expander { title: "Bidirectional Streaming - RouteChat" }
+        }
+    }
+}

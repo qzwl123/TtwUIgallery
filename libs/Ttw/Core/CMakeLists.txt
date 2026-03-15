@@ -2,16 +2,19 @@
 qt_add_library(TtwCore STATIC)
 
 # --- gRPC/Protobuf 自动生成 ---
-qt_add_protobuf(TtwCore
-    PROTO_FILES "${CMAKE_SOURCE_DIR}/protos/stream.proto"
-)
+# qt_add_protobuf(TtwCore
+#     PROTO_FILES "${CMAKE_SOURCE_DIR}/protos/stream.proto"
+# )
 
-qt_add_grpc(TtwCore CLIENT
-    PROTO_FILES "${CMAKE_SOURCE_DIR}/protos/stream.proto"
-)
+# qt_add_grpc(TtwCore CLIENT
+#     PROTO_FILES "${CMAKE_SOURCE_DIR}/protos/stream.proto"
+# )
+
 
 # --- 源码管理 ---
 target_sources(TtwCore PRIVATE
+    gRPCTools/grpctool.h gRPCTools/grpctool.cpp
+
     # src/network/TcpClient.cpp
     # src/network/UdpClient.cpp
     # src/serial/SerialManager.cpp

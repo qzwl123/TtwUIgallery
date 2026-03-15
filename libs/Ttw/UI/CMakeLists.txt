@@ -48,6 +48,8 @@ qt_add_qml_module(TtwUI
         controls/Button.qml
         controls/TextBox.qml
         controls/Expander.qml
+        controls/SurfaceCard.qml
+        controls/StatusBadge.qml
 
         controls/windowControls/TtwTitleBar.qml
         controls/windowControls/TtwWindow.qml

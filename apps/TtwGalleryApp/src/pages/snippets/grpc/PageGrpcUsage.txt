@@ -1,0 +1,24 @@
+PageGrpc mode guide
+===================
+
+Unary Call - sayHello
+- Fully implemented in this iteration.
+- Uses the shared GrpcClient singleton and Core/grpctool.h helpers.
+- Shows channel state, request status, and the latest response body.
+
+Server Streaming - ListFeatures
+- Reserved UI scaffold only.
+- Intended for one request that receives many server-pushed messages.
+
+Client Streaming - RecordRoute
+- Reserved UI scaffold only.
+- Intended for many outbound messages followed by one final response.
+
+Bidirectional Streaming - RouteChat
+- Reserved UI scaffold only.
+- Intended for a long-lived session with concurrent send and receive.
+
+Notes
+- Stream sections are intentionally disabled today.
+- PageHome no longer triggers gRPC requests directly.
+- This page is the single entry point for gRPC interaction in TtwGalleryApp.

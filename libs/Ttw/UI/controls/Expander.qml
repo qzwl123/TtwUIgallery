@@ -13,11 +13,13 @@ Item {
     property string title: "标题"
     property string iconText: "</>"
     property bool isExpanded: false
+    property bool autoToggle: true
 
     // 🌟【新增智能属性】：只要传入字符串，它就会自动变成带复制功能的“代码面板”
     property string codeText: ""
     // 直接传入文件路径，自动读取内容！
     property url codeSource: ""
+    signal headerClicked()
 
     // 允许外部塞入通用组件
     default property alias contentData: customContent.data
@@ -74,7 +76,11 @@ Item {
                 Behavior on rotation { NumberAnimation { duration: 200; easing.type: Easing.OutQuart } }
             }
         }
-        onClicked: root.isExpanded = !root.isExpanded
+        onClicked: {
+            if (root.autoToggle)
+                root.isExpanded = !root.isExpanded
+            root.headerClicked()
+        }
     }
 
     // ==========================================

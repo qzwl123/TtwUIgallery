@@ -39,8 +39,11 @@ qt_add_qml_module(TtwGalleryApp
         src/pages/PageHome.qml
         src/pages/PageIcons.qml
         src/pages/PageChart.qml
-
+        src/pages/PageGrpc.qml
+    RESOURCES
         src/pages/snippets/chart/FoldingLineChartSnippet.txt
+        src/pages/snippets/grpc/PageGrpcSnippet.txt
+        src/pages/snippets/grpc/PageGrpcUsage.txt
 
 )
 
@@ -52,8 +55,8 @@ qt_add_qml_module(TtwGalleryApp
 # 3. 插件导入 (import path)
 target_link_libraries(TtwGalleryApp PRIVATE
     Qt6::Quick
-    # TtwCore    # 链接核心库
-    TtwUI      # 链接 UI 库
+    TtwCore      # 链接核心库
+    TtwUI        # 链接 UI 库
     TtwUIplugin
 )
 

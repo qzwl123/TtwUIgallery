@@ -3,8 +3,6 @@ import QtQuick.Layouts
 import QtQuick.Controls 2.15 as Basic
 import Ttw.UI
 
-import MygRPC 1.0
-
 // 这是一个内容页面
 ColumnLayout {
     spacing: 20
@@ -20,8 +18,7 @@ ColumnLayout {
         spacing: 10
         Button {
             text: "Standard Button"
-            onClicked: GrpcClient.fetchGreeting('ttw')
-            // onClicked: console.log("Standard clicked")
+            onClicked: console.log("Standard clicked")
         }
 
         Button {

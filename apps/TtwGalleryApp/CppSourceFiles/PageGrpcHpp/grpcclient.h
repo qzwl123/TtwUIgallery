@@ -6,7 +6,9 @@
 #include <QGrpcCallReply>
 #include <QDebug>
 #include <QJSEngine>
+#include <QString>
 
+#include "gRPCTools/grpctool.h"
 
 #include "stream.qpb.h"
 #include "stream_client.grpc.qpb.h"
@@ -17,55 +19,45 @@ class GrpcClient : public QObject
     QML_ELEMENT
     QML_SINGLETON
 
-    // Q_PROPERTY(QString responseText READ responseText NOTIFY responseTextChanged)
-    // Q_PROPERTY(bool isLoading READ isLoading NOTIFY isLoadingChanged)
-
-signals:
-    // void responseTextChanged();
-    // void isLoadingChanged();
+    Q_PROPERTY(bool channelReady READ channelReady NOTIFY channelReadyChanged)
+    Q_PROPERTY(bool busy READ busy NOTIFY busyChanged)
+    Q_PROPERTY(QString endpoint READ endpoint CONSTANT)
+    Q_PROPERTY(QString lastMessage READ lastMessage NOTIFY lastMessageChanged)
+    Q_PROPERTY(QString lastStatusText READ lastStatusText NOTIFY lastStatusTextChanged)
+    Q_PROPERTY(int lastStatusCode READ lastStatusCode NOTIFY lastStatusTextChanged)
 
 public:
-    explicit GrpcClient(std::shared_ptr<QAbstractGrpcChannel> channel);
+    explicit GrpcClient(QObject *parent = nullptr);
 
-    ///
-    /// \brief handleReply 一元 RPC 调用返回
-    /// \param reply 包含 gRPC 回复数据的智能指针。函数会接管该指针的所有权，在内部使用完毕后自动销毁。
-    /// \param onSuccess 可选的完成回调函数。当回复成功且数据有效时调用，无参数无返回值。
-    /// \param onFinished 流结束或出错时的可选回调函数（缺省为空）
-    ///
-    template<typename Reply>
-    void handleReply(std::unique_ptr<QGrpcCallReply> reply,
-                     std::function<void(const Reply&)> onSuccess,
-                     std::function<void(const QGrpcStatus &)> onFinished = nullptr);
+    Q_INVOKABLE void onsayHello(const int &id, const QString &dat);
+    Q_INVOKABLE void clearState();
 
-    ///
-    /// \brief handleStreamReply 服务器流 RPC 调用返回
-    /// \param stream 服务端流的智能指针，函数接管所有权
-    /// \param onMessage 每次收到流数据时的回调函数
-    /// \param onFinished 流结束或出错时的可选回调函数（缺省为空）
-    ///
-    template<typename Reply>
-    void handleStreamReply(std::unique_ptr< QGrpcServerStream > stream,
-                           std::function< void (const Reply &) > onMessage,
-                           std::function< void (const QGrpcStatus &) > onFinished = nullptr);
+    bool channelReady() const;
+    bool busy() const;
+    QString endpoint() const;
+    QString lastMessage() const;
+    QString lastStatusText() const;
+    int lastStatusCode() const;
 
+signals:
+    void channelReadyChanged();
+    void busyChanged();
+    void lastMessageChanged();
+    void lastStatusTextChanged();
 
-    Q_INVOKABLE void fetchGreeting(const QString &name);
-    // QString responseText() const { return m_responseText; }
-    // bool isLoading() const { return m_isLoading; }
 private:
-/*    QString m_responseText;
-    bool m_isLoading = false*/;
+    void setChannelReady(bool ready);
+    void setBusy(bool busy);
+    void setLastMessage(const QString &message);
+    void setLastStatus(const QString &text, int code);
 
-    // 必须管理 Reply 对象的生命周期，否则请求会被意外取消
-    std::unique_ptr<QGrpcCallReply> m_currentReply;
-    // 保存底层的 gRPC 客户端指针
-    routeguide::RouteGuide::Client m_grpcClient; // 命名规则：包名::服务名::Client
-
-
-public :
-    // 提供一个全局访问点，方便我们在 main.cpp 中注入 gRPC client
-    // static GrpcClient *instance();
+    routeguide::RouteGuide::Client m_grpcClient;
+    QString m_endpoint = QStringLiteral("http://127.0.0.1:5200");
+    bool m_channelReady = false;
+    bool m_busy = false;
+    QString m_lastMessage;
+    QString m_lastStatusText = QStringLiteral("Ready");
+    int m_lastStatusCode = 0;
 };
 
 #endif // GRPCCLIENT_H
