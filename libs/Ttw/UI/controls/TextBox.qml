@@ -79,7 +79,7 @@ T.TextField {
 
                 color: {
                     if (!control.enabled) return "transparent"
-                    if (control.activeFocus) return Theme.accentMain
+                    if (control.activeFocus) return Theme.strokeFocus
                     return Theme.borderRest
                 }
 

@@ -7,6 +7,44 @@ import Ttw.UI
 ColumnLayout {
     spacing: 20
 
+    Rectangle {
+        Layout.fillWidth: true
+        Layout.preferredHeight: 92
+        radius: Theme.radiusLarge
+        color: Theme.controlSolid
+        border.width: 1
+        border.color: Theme.borderRest
+
+        RowLayout {
+            anchors.fill: parent
+            anchors.margins: 16
+
+            ColumnLayout {
+                Layout.fillWidth: true
+                spacing: 4
+
+                Text {
+                    text: "WinUI 3 Gallery"
+                    font: Theme.fontTitle
+                    color: Theme.textPrimary
+                }
+
+                Text {
+                    text: "基于 Qt 6 + QML 的 Fluent 风格控件示例"
+                    font: Theme.fontBody
+                    color: Theme.textSecondary
+                }
+            }
+
+            Button {
+                text: "主题切换"
+                isAccent: true
+                iconSource: Icons.edit
+                onClicked: Theme.mode = Theme.mode === Theme.Mode.Light ? Theme.Mode.Dark : Theme.Mode.Light
+            }
+        }
+    }
+
     Text {
         text: "基础控件展示"
         font: Theme.fontTitle
@@ -45,6 +83,7 @@ ColumnLayout {
     Basic.Switch {
         text: "深色模式 (Dark Mode)"
         palette.windowText: Theme.textPrimary
+        checked: Theme.mode === Theme.Mode.Dark
         onCheckedChanged: Theme.mode = checked ? Theme.Mode.Dark : Theme.Mode.Light
     }
 

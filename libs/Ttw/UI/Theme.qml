@@ -16,6 +16,7 @@ QtObject {
 
     // 圆角
     property int radiusBase: 4
+    property int radiusLarge: 8
 
     // ====================
     // 2. 字体加载 (Ubuntu/跨平台关键)
@@ -46,6 +47,8 @@ QtObject {
     property color textOnAccent: "#FFFFFF"
 
     property color bgMain: c("#F3F3F3", "#202020")
+    property color bgLayer: c(Qt.rgba(1,1,1,0.76), Qt.rgba(0.13,0.13,0.13,0.82))
+    property color bgSubtle: c("#FAFAFA", "#2A2A2A")
     property color controlSolid: c("#FFFFFF", "#1E1E1E")
 
     // 控件填充色
@@ -63,6 +66,7 @@ QtObject {
     // 边框色
     property color borderRest:   c(Qt.rgba(0,0,0,0.15), Qt.rgba(1,1,1,0.15))
     property color borderHover:  c(Qt.rgba(0,0,0,0.25), Qt.rgba(1,1,1,0.25))
+    property color strokeFocus:  Qt.rgba(accentMain.r, accentMain.g, accentMain.b, 0.85)
 
     // 文本色
     property color textPrimary:   c("#1A1A1A", "#FFFFFF")
