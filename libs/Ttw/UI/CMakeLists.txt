@@ -46,7 +46,7 @@ qt_add_qml_module(TtwUI
         "${CMAKE_CURRENT_BINARY_DIR}/SysInfo.qml"
     QML_FILES
         controls/Button.qml
-        controls/TextBox.qml
+        controls/TextField.qml
         controls/Expander.qml
         controls/SurfaceCard.qml
         controls/StatusBadge.qml
@@ -65,6 +65,7 @@ qt_add_qml_module(TtwUI
     SOURCES
         CppSourceFiles/chart/fileio.h
         CppSourceFiles/chart/fileio.cpp
+        QML_FILES controls/GroupBox.qml
 )
 
 target_include_directories(TtwUI PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/CppSourceFiles/chart)

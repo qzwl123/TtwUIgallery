@@ -3,6 +3,8 @@ import QtQuick.Layouts
 import QtQuick.Controls 2.15 as Basic
 import Ttw.UI
 
+import  MygRPC
+
 // 这是一个内容页面
 ColumnLayout {
     spacing: 20
@@ -18,7 +20,8 @@ ColumnLayout {
         spacing: 10
         Button {
             text: "Standard Button"
-            onClicked: console.log("Standard clicked")
+            onClicked: GrpcClient.onsayHello(1, "ttw")
+             // console.log("Standard clicked")
         }
 
         Button {
@@ -35,10 +38,11 @@ ColumnLayout {
     }
 
     // --- 输入框展示区 ---
-    TextBox {
+    TextField {
        placeholderText: "请输入内容..."
        Layout.fillWidth: true
        Layout.maximumWidth: 400
+
     }
 
 
