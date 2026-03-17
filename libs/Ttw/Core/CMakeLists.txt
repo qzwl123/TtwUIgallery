@@ -1,5 +1,6 @@
 # 定义静态库 (推荐 Static，避免 DLL 地狱，且编译更快)
-qt_add_library(TtwCore STATIC)
+qt_add_library(TtwCore STATIC
+    Logs/LogConfig.json)
 
 # --- gRPC/Protobuf 自动生成 ---
 # qt_add_protobuf(TtwCore
@@ -14,6 +15,7 @@ qt_add_library(TtwCore STATIC)
 # --- 源码管理 ---
 target_sources(TtwCore PRIVATE
     gRPCTools/grpctool.h gRPCTools/grpctool.cpp
+    json.hpp
 
     # src/network/TcpClient.cpp
     # src/network/UdpClient.cpp

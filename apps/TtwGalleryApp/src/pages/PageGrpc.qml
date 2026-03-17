@@ -3,7 +3,7 @@ import QtQuick.Controls
 import QtQuick.Layouts
 
 import Ttw.UI
-import MygRPC 1.0
+import MygRPC
 
 Item {
     id: root
@@ -24,6 +24,7 @@ Item {
             return "Channel Offline"
         return GrpcClient.lastStatusCode === 0 ? "Ready" : "Reply Error"
     }
+
 
 
     // 页面主滚动视图（防止屏幕太小显示不全）
@@ -99,50 +100,198 @@ Item {
             }
 
             GroupBox {
-                id: control
+                id: rpc_unaryCall
                 title: "gRPC 一元"
                 Layout.fillWidth: true
 
                 GridLayout {
                     width: parent.width
-                    columns: 2
-                    rowSpacing: 16
+                    columns: 5
+                    rowSpacing: 5
                     columnSpacing: 12
 
-                    Label { text: "服务端点:"; Layout.alignment: Qt.AlignRight }
-                    TextField { text: GrpcClient.endpoint; enabled: false; Layout.fillWidth: true }
-
-                    Label { text: "请求参数:"; Layout.alignment: Qt.AlignRight }
-                    TextField { placeholderText: "输入内容..."; Layout.fillWidth: true }
-
                     Button {
-                        text: "Standard Button"
-                        onClicked: GrpcClient.onsayHello(1, "ttw")
+                        text: "onsayHello"
+                        onClicked: GrpcClient.onsayHello(proto_Unary_id.text, proto_Unary_data.text)
                          // console.log("Standard clicked")
                     }
 
+                    Label { text: "id:"; Layout.alignment: Qt.AlignRight }
+                    TextField { id:proto_Unary_id; placeholderText: "输入内容..."; Layout.fillWidth: true }
+
+                    Label { text: "data:"; Layout.alignment: Qt.AlignRight }
+                    TextField { id:proto_Unary_data; placeholderText: "输入内容..."; Layout.fillWidth: true }
+
                     Expander {
+                        Layout.topMargin: 20
                         Layout.fillWidth: true
-                        title: "View PageGrpc Source"
+                        // 让按钮横跨两列并居中（如果你想让它在右边，可以改用 Qt.AlignRight）
+                        Layout.columnSpan: 5
+                        Layout.alignment: Qt.AlignHCenter
+                        title: "一元 RPC Source"
                         iconText: "</>"
                         isExpanded: false
                         codeSource: Qt.resolvedUrl("snippets/grpc/PageGrpcSnippet.txt")
                     }
                 }
-
             }
 
 
-
-            Expander {
+            GroupBox {
+                id: rpc_serverStreaming
+                title: "gRPC 服务器流"
                 Layout.fillWidth: true
-                title: "Mode Notes"
-                iconText: "i"
-                isExpanded: false
-                codeSource: Qt.resolvedUrl("snippets/grpc/PageGrpcUsage.txt")
+
+                GridLayout {
+                    width: parent.width
+                    columns: 5
+                    rowSpacing: 5
+                    columnSpacing: 12
+
+                    Button {
+                        text: "Standard Button"
+                        onClicked: GrpcClient.onsayHello(proto_id.text, proto_data.text)
+                         // console.log("Standard clicked")
+                    }
+
+                    Label { text: "id:"; Layout.alignment: Qt.AlignRight }
+                    TextField {  placeholderText: "输入内容..."; Layout.fillWidth: true }
+
+                    Label { text: "data:"; Layout.alignment: Qt.AlignRight }
+                    TextField { placeholderText: "输入内容..."; Layout.fillWidth: true }
+
+                    Expander {
+                        Layout.topMargin: 20
+                        Layout.fillWidth: true
+                        // 让按钮横跨两列并居中（如果你想让它在右边，可以改用 Qt.AlignRight）
+                        Layout.columnSpan: 5
+                        Layout.alignment: Qt.AlignHCenter
+                        title: "一元 RPC Source"
+                        iconText: "</>"
+                        isExpanded: false
+                        codeSource: Qt.resolvedUrl("snippets/grpc/PageGrpcSnippet.txt")
+                    }
+                }
             }
+
+            GroupBox {
+                id: rpc_clientStreaming
+                title: "gRPC 客户端流"
+                Layout.fillWidth: true
+
+                GridLayout {
+                    width: parent.width
+                    columns: 5
+                    rowSpacing: 5
+                    columnSpacing: 12
+
+                    Button {
+                        text: "Standard Button"
+                        onClicked: GrpcClient.onsayHello(proto_id.text, proto_data.text)
+                         // console.log("Standard clicked")
+                    }
+
+                    Label { text: "id:"; Layout.alignment: Qt.AlignRight }
+                    TextField {  placeholderText: "输入内容..."; Layout.fillWidth: true }
+
+                    Label { text: "data:"; Layout.alignment: Qt.AlignRight }
+                    TextField { placeholderText: "输入内容..."; Layout.fillWidth: true }
+
+                    Expander {
+                        Layout.topMargin: 20
+                        Layout.fillWidth: true
+                        // 让按钮横跨两列并居中（如果你想让它在右边，可以改用 Qt.AlignRight）
+                        Layout.columnSpan: 5
+                        Layout.alignment: Qt.AlignHCenter
+                        title: "一元 RPC Source"
+                        iconText: "</>"
+                        isExpanded: false
+                        codeSource: Qt.resolvedUrl("snippets/grpc/PageGrpcSnippet.txt")
+                    }
+                }
+            }
+
+            GroupBox {
+                id: rpc_bidirectionalStreaming
+                title: "gRPC 服务器流"
+                Layout.fillWidth: true
+
+                GridLayout {
+                    width: parent.width
+                    columns: 5
+                    rowSpacing: 5
+                    columnSpacing: 12
+
+                    Button {
+                        text: "Standard Button"
+                        onClicked: GrpcClient.onsayHello(proto_id.text, proto_data.text)
+                         // console.log("Standard clicked")
+                    }
+
+                    Label { text: "id:"; Layout.alignment: Qt.AlignRight }
+                    TextField {  placeholderText: "输入内容..."; Layout.fillWidth: true }
+
+                    Label { text: "data:"; Layout.alignment: Qt.AlignRight }
+                    TextField { placeholderText: "输入内容..."; Layout.fillWidth: true }
+
+                    Expander {
+                        Layout.topMargin: 20
+                        Layout.fillWidth: true
+                        // 让按钮横跨两列并居中（如果你想让它在右边，可以改用 Qt.AlignRight）
+                        Layout.columnSpan: 5
+                        Layout.alignment: Qt.AlignHCenter
+                        title: "一元 RPC Source"
+                        iconText: "</>"
+                        isExpanded: false
+                        codeSource: Qt.resolvedUrl("snippets/grpc/PageGrpcSnippet.txt")
+                    }
+                }
+            }
+
+
+            DebugConsole {
+                id: grpcLogConsole
+                title: "gRPC 通信日志"
+                Layout.fillWidth: true
+                Layout.fillHeight: true // 自动撑满底部剩余空间
+            }
+
+            // // ==========================================
+            // // 模拟测试：如何在操作时写入日志
+            // // ==========================================
+            // Button {
+            //     text: "发送请求"
+            //     onClicked: {
+            //         // 1. 记录发送日志
+            //         grpcLogConsole.appendLog("TX", "发送数据给服务端: " + proto_data.text)
+
+            //         // 2. 假设这里调用 C++
+            //         GrpcClient.fetchGreeting(proto_data.text)
+            //     }
+            // }
+
+            // // 假设我们监听了 C++ 的某个属性或信号来接收返回值
+            // Connections {
+            //     target: GrpcClient
+
+            //     function onLastMessageChanged() {
+            //         // 3. 记录接收日志
+            //         grpcLogConsole.appendLog("RX", "收到服务端响应: " + GrpcClient.lastMessage)
+            //     }
+
+            //     function onLastStatusTextChanged() {
+            //         if (GrpcClient.lastStatusCode !== 0) {
+            //             // 4. 记录错误日志
+            //             grpcLogConsole.appendLog("ERR", "请求失败: " + GrpcClient.lastStatusText)
+            //         }
+            //     }
+            // }
+
 
             Item { Layout.fillHeight: true }
         }
+
+
+
     }
 }

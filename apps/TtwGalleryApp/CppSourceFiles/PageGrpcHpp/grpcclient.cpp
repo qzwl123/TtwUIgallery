@@ -41,8 +41,7 @@ void GrpcClient::onsayHello(const int &id, const QString &dat)
     setLastStatus(QStringLiteral("Sending request..."), 0);
     qDebug() << "[GrpcClient::onsayHello]" << id << dat;
 
-    // auto reply = m_grpcClient.sayHello(req);
-    auto reply = m_grpcClient.ListFeatures(req);
+    auto reply = m_grpcClient.sayHello(req);
     qDebug() << "[GrpcClient::onsayHello] reply valid:" << (reply != nullptr);
 
     if (!reply) {
@@ -53,8 +52,7 @@ void GrpcClient::onsayHello(const int &id, const QString &dat)
     }
 
     QPointer<GrpcClient> self(this);    
-    // GrpcTool::handleReply<routeguide::Response>(
-    GrpcTool::handleStreamReply<routeguide::Response>(
+    GrpcTool::handleReply<routeguide::Response>(
         std::move(reply),
         [self](const routeguide::Response &resp) {
             if (!self)

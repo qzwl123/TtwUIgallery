@@ -42,6 +42,7 @@ qt_add_qml_module(TtwUI
     QML_FILES        
         Theme.qml
         Icons.qml
+        DebugConsole.qml
         # 在 build 目录生成的 SysInfo.qml 加进模块
         "${CMAKE_CURRENT_BINARY_DIR}/SysInfo.qml"
     QML_FILES
@@ -50,12 +51,14 @@ qt_add_qml_module(TtwUI
         controls/Expander.qml
         controls/SurfaceCard.qml
         controls/StatusBadge.qml
+        controls/GroupBox.qml
 
         controls/windowControls/TtwTitleBar.qml
         controls/windowControls/TtwWindow.qml
         controls/windowControls/TtwNavigationView.qml
 
         controls/chartControls/FoldingLineChart.qml
+
     RESOURCES
         # 将字体打包进库，App 无需关心资源路径
         fonts/FluentIcons.ttf
@@ -65,7 +68,7 @@ qt_add_qml_module(TtwUI
     SOURCES
         CppSourceFiles/chart/fileio.h
         CppSourceFiles/chart/fileio.cpp
-        QML_FILES controls/GroupBox.qml
+
 )
 
 target_include_directories(TtwUI PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/CppSourceFiles/chart)

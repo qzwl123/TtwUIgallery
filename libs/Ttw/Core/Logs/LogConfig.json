@@ -1,0 +1,7 @@
+{
+    "comment": "调试配置文件。EnableAll=true 会打印所有日志。",
+    "Debug": {
+        "EnableAll": false,
+        "EnableTcpRecv": false
+    }
+}
