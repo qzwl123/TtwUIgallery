@@ -1,6 +1,7 @@
 #include "grpcclient.h"
 
 #include <QPointer>
+#include <Logs/logmanager.h>
 
 GrpcClient::GrpcClient(QObject *parent)
     : QObject(parent)
@@ -26,6 +27,13 @@ GrpcClient::GrpcClient(QObject *parent)
 
 void GrpcClient::onsayHello(const int &id, const QString &dat)
 {
+
+    LOG_OBJ_TX(this, "发送核心数据请求...");
+    LOG_OBJ_INFO(this, "请求流程圆满结束");
+     qDebug() << "发送核心数据请求...";
+
+    return ;
+
     if (!m_channelReady) {
         setLastStatus(QStringLiteral("Channel is not ready."),
                       static_cast<int>(QtGrpc::StatusCode::Unavailable));

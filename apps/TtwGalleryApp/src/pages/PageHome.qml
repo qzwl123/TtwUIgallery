@@ -3,7 +3,9 @@ import QtQuick.Layouts
 import QtQuick.Controls 2.15 as Basic
 import Ttw.UI
 
-import  MygRPC
+import MygRPC
+import MygLog
+
 
 // 这是一个内容页面
 ColumnLayout {
@@ -59,13 +61,40 @@ ColumnLayout {
     // 模拟测试：如何在操作时写入日志
     // ==========================================
 
+    // 【核心连接】：监听 C++ 的全局日志信号
+    Connections {
+        target: LogManager // 监听 C++ 的 LogManager 单例
+
+        // 当 C++ 触发 emit newLog(...) 时，这里就会执行
+        function onNewLog(className, funcName, type, message) {
+            // 直接追加到 UI 列表中！
+            grpcLogConsole.appendLog(className, funcName, type, message)
+        }
+    }
+
+    Basic.CheckBox {
+        text: "显示底层网络日志"
+        checked: true
+        onCheckedChanged: {
+            if (checked) {
+                // LogManager.unmuteClass("grpcclient.cpp")
+                LogManager.unmuteObject("clientGuide");
+            } else {
+                // LogManager.muteClass("grpcclient.cpp")
+                LogManager.muteObject("clientGuide");
+            }
+        }
+    }
+
     // 测试调用
     Button {
         text: "发送 gRPC"
-        onClicked: {
+        onClicked: {           
             grpcLogConsole.appendLog("GrpcClient", "fetchGreeting", "TX", "发送数据: " +proto_data.text)
         }
     }
+
+
 
     // 假设我们监听了 C++ 的某个属性或信号来接收返回值
     Connections {
