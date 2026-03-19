@@ -15,6 +15,7 @@ qt_add_library(TtwCore STATIC
 
 # --- 源码管理 ---
 target_sources(TtwCore PRIVATE
+    FileTools/filetool.h FileTools/filetool.cpp
     gRPCTools/grpctool.h gRPCTools/grpctool.cpp
     Logs/logmanager.h Logs/logmanager.cpp
     json.hpp

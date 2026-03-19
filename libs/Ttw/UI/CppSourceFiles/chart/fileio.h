@@ -2,21 +2,31 @@
 #define FILEIO_H
 
 #pragma once
+
 #include <QObject>
 #include <QString>
 #include <QUrl>
-#include <QtQml/qqml.h> // 🌟 Qt 6 注册宏的头文件
+#include <QVariantList>
+#include <QtQml/qqml.h>
 
 class FileIO : public QObject
 {
     Q_OBJECT
-    QML_ELEMENT     // 🌟 告诉 Qt 6 编译器：把这个类暴露给 QML
-    QML_SINGLETON   // 🌟 告诉 Qt 6 编译器：这是一个全局单例
+    QML_ELEMENT
+    QML_SINGLETON
 
 public:
     explicit FileIO(QObject *parent = nullptr);
 
+    // 通过共享的 TtwCore 文件工具读取文本片段或源码文件。
     Q_INVOKABLE QString readTextFile(const QUrl &fileUrl);
+
+    // 只预览前几行 CSV。
+    // 这是一个直接给 QML 使用的 FileTool::readCsvRows 示例。
+    Q_INVOKABLE QVariantList previewCsvFile(const QUrl &fileUrl, int maxRows = 20);
+
+private:
+    QString resolvePath(const QUrl &fileUrl) const;
 };
 
 #endif // FILEIO_H

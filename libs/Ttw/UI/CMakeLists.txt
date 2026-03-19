@@ -89,4 +89,6 @@ target_link_libraries(TtwUI
     PUBLIC
         Qt6::Quick
         Qt6::Qml
+    PRIVATE
+        TtwCore
 )
